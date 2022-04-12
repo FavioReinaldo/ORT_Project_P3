@@ -24,6 +24,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+
+                        @if (Context.Session.GetString("Mail") == null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Login">Inicio de Sesion</a>
+                            </li>
+                        }
+
+                        @if (Context.Session.GetString("Mail") != null)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Planta" asp-action="ListarPlanta">Listar Plantas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CerrarSesion">Cerrar sesion</a>
+                            </li>
+                        }
+
                     </ul>
                 </div>
             </div>
@@ -44,5 +62,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
+
+    @using Microsoft.AspNetCore.Http;
 </body>
 </html>

@@ -7,30 +7,15 @@ namespace Dominio
     public class Sistema
     {
         
-        #region Atributos Sistema
+        #region Listas
         
         private List<Compra> compras = new List<Compra>();
         private List<Usuario> usuarios = new List<Usuario>();
         private List<Planta> plantas = new List<Planta>();
         private List<Tipo> tipos = new List<Tipo>();
-        #endregion
-        
-        #region Singleton
-        private static Sistema instancia;
-
-        public static Sistema Instancia
-        {
-            get
-            {
-                if (instancia == null)
-                {
-                    instancia = new Sistema();
-                }
-                return instancia;
-            }
-        }
-        #endregion 
-
+        #endregion        
+       
+        #region Atributos Sistema        
         public List<Compra> Compras
         {
             get { return compras; }
@@ -47,8 +32,41 @@ namespace Dominio
         {
             get { return usuarios; }
         }
-        
+        #endregion
 
+        #region Singleton
+        private static Sistema instancia;
+
+        public static Sistema Instancia
+        {
+            get
+            {
+                if (instancia == null)
+                {
+                    instancia = new Sistema();
+                }
+                return instancia;
+            }
+        }
+        #endregion 
+
+        #region Método Constructor de Sistema
+        public Sistema() //Metodo constructor de Object
+        {            
+            PreCargarDatosUsuarios();            
+        }
+        #endregion
+
+        #region Método PreCargarDatosUsuarios
+        //*************** CARGA DE DATOS DE USUARIOS HARCODEADOS ***************        
+        private void PreCargarDatosUsuarios()
+        {            
+            this.usuarios.Add(new Usuario("Usuario1@mail.com", "Usuario1"));
+            this.usuarios.Add(new Usuario("Usuario2@mail.com", "Usuario2"));
+            this.usuarios.Add(new Usuario("Usuario3@mail.com", "Usuario3"));
+
+        }
+        #endregion
 
         #region Metodo ValidarTipo
         //*************** METODO VALIDAR TIPO ***************
@@ -97,7 +115,7 @@ namespace Dominio
 
         #region Método Listar Plantas
         //*************** METODO PARA ARMAR UNA LISTA DE PLANTAS ***************
-        private List<Planta> ListaDeUsuarioCliente()
+        private List<Planta> ListaDePlanta()
         {
             List<Planta> misPlantas = new List<Planta>();
 
@@ -112,12 +130,12 @@ namespace Dominio
         #region Método Buscar Plantas segun Ambiente
         //*************** METODO PARA BUSCAR PLANTAS SEGUN UN AMBIENTE  ***************
 
-        public List<Planta> BuscarPlantaPorAmbiente(int miAmbiente)
+        public List<Planta> BuscarPlantaPorAmbiente(string miAmbiente)
         {
 
             List<Planta> misPlantasBuscadas = new List<Planta>();
 
-            if (miAmbiente > 0)
+            if (miAmbiente != "")
             {
                 foreach (Planta miPlanta in plantas)
                 {
@@ -189,9 +207,7 @@ namespace Dominio
             }
             return tipoEliminado;
         }
-        #endregion
-
-        
+        #endregion               
 
         #region Metodo Eliminar Tipo
         public bool EliminarTipo(Tipo tipo)
@@ -324,5 +340,24 @@ namespace Dominio
         }
         #endregion
 
+
+        /*
+        IRepositorio<Usuario> repositorioUsuario = new RepositorioUsuario(new Connection());
+
+        
+        #region Método Cargar datos de usuarios en la lista
+        //*************** METODO PARA ARMAR UNA LISTA DE PLANTAS ***************
+        private List<Usuario> CargarDatosListaUsuarios()
+        {
+            List<Usuario> misUsuarios = new List<Usuario>();
+            
+            foreach (Usuario miUsuario in usuarios)
+            {
+                repositorioUsuario.Get()
+            }
+            return misPlantas;
+        }
+        #endregion
+        */
     }
 }

@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00_UI", "00_UI", "{C6A030B9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_DataAccess", "02_DataAccess", "{C97F83B7-8CF8-461A-9BBC-5594ACC749B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{CD33A4F1-0188-419E-B695-3A0FD644724D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{CD33A4F1-0188-419E-B695-3A0FD644724D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9AD3C73C-E027-43D5-9B39-C4945C9BCDAF} = {C6A030B9-D9C1-476C-83F2-2AB4FC24B844}
 		{3D6168B6-BA08-402D-9F3D-F9FA27F7A27D} = {73DE08CF-EF0B-4C97-A088-428AA5B4A102}
+		{CD33A4F1-0188-419E-B695-3A0FD644724D} = {C97F83B7-8CF8-461A-9BBC-5594ACC749B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BFEBED73-E36B-425D-825A-61E959B7C8A4}

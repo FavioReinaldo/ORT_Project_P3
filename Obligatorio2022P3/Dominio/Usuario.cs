@@ -18,7 +18,13 @@ namespace Dominio
             this.mail = mail;
             this.password = password;
         }
+        public Usuario()
+        {
+            //Constructor por defecto
+        }
         #endregion
+
+
 
         #region Metodo Validar Password
         public bool ValidarPassword(string miPassword)

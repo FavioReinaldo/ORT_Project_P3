@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Planta>
+
+@{ ViewData["title"] = "ListarPlanta";
+}
+
+<h1>Lista de Plantas</h1>
+
+<p>
+    <a asp-action="Create">Nueva Planta</a>
+</p>
+<!---->
+<h2>Filtrar Lista de Plantas</h2>
+<form method="post" action="~/Planta/ListarPlantaMasBajaQueXCentimetros">
+    <label>Filtrar por altura, mas bajas que:</label><br>
+    <input type="number" name="altura" id="miAlturaMaxima" />
+    <br /><br>
+    <input type="submit" value="Filtrar" onclick="return ValidarDatos();" />
+</form>
+<br>
+<p>@ViewBag.Mensaje</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.miTipo)</th>
+            <th>@Html.DisplayNameFor(model => model.nombreCientifico)</th>
+            <th>@Html.DisplayNameFor(model => model.misNombresVulgares)</th>
+            <th>@Html.DisplayNameFor(model => model.descripcion)</th>
+            <th>@Html.DisplayNameFor(model => model.ambiente)</th>
+            <th>@Html.DisplayNameFor(model => model.alturaMaxima)</th>
+            <th>@Html.DisplayNameFor(model => model.fotoUrl)</th>
+            <th>@Html.DisplayNameFor(model => model.miFichaCuidados)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.miTipo)</td>
+                <td>@Html.DisplayFor(modelItem => item.nombreCientifico)</td>
+                <td>@Html.DisplayFor(modelItem => item.misNombresVulgares)</td>
+                <td>@Html.DisplayFor(modelItem => item.descripcion)</td>
+                <td>@Html.DisplayFor(modelItem => item.ambiente)</td>
+                <td>@Html.DisplayFor(modelItem => item.alturaMaxima)</td>
+                <td>@Html.DisplayFor(modelItem => item.fotoUrl)</td>
+                <td>@Html.DisplayFor(modelItem => item.miFichaCuidados)</td>
+                <td><a asp-action="Edit" asp-rout-id=@item.Id>Edit</a></td>
+                <td><a asp-action="Details" asp-rout-id=@item.Id>Details</a></td>
+                <td><a asp-action="Delete" asp-rout-id=@item.Id>Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function ValidarDatos() {
+        let altura = parseFloat(document.getElementById("miAlturaMaxima").value);
+        let validacion = true;
+
+        if (isNaN(altura) || altura <= 0) {
+            alert("Error en la altura ingresada");
+            validacion = false;
+        }
+
+        return validacion;
+    }
+</script>

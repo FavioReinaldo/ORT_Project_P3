@@ -12,7 +12,7 @@ namespace Dominio
         public string nombreCientifico { get; set; }
         public List<string> misNombresVulgares { get; set; }
         public string descripcion { get; set; }
-        public string ambiente { get; }
+        public AmbienteEnum ambiente { get; }
         public double alturaMaxima { get; set; }
         public string fotoUrl { get; set; }
         public FichaCuidados miFichaCuidados { get; set; }
@@ -24,11 +24,14 @@ namespace Dominio
         {
             this.nombreCientifico = nombreCientifico;
             this.descripcion = descripcion;
-            ambiente = (string)unambiente;
+            this.ambiente = unambiente;
             this.alturaMaxima = alturaMaxima;
             this.fotoUrl = fotoUrl;
         }
-
+        public Planta()
+        {
+            //Constructor por defecto
+        }
         public bool ValidarPlanta(string NombreCientifico)
         {
             bool retorno = false;

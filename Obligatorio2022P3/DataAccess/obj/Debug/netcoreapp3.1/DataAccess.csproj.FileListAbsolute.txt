@@ -1,0 +1,13 @@
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\Dominio.dll
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\Dominio.pdb
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.AssemblyReference.cache
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
