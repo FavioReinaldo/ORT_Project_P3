@@ -353,7 +353,7 @@ namespace Dominio
             
             foreach (Usuario miUsuario in usuarios)
             {
-                repositorioUsuario.Get()
+                repositorioUsuario.Get();
             }
             return misPlantas;
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,5 +9,6 @@ namespace DataAccess
 {
     interface IRepositorioUsuario:IRepositorio<Usuario>
     {
+        IEnumerable GetUsuario(string mail, string usuario);
     }
 }

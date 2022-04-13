@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Dominio.Planta>
+
+    @{ ViewData["title"] = "ListarPlantaMasBajaQueXCentimetros";
+    }
+
+    <h1>Listado de Plantas segun altura maxima</h1>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.miTipo.miNombre)</th>
+                <th>@Html.DisplayNameFor(model => model.nombreCientifico)</th>
+                <th>@Html.DisplayNameFor(model => model.misNombresVulgares)</th>
+                <th>@Html.DisplayNameFor(model => model.descripcion)</th>
+                <th>@Html.DisplayNameFor(model => model.ambiente)</th>
+                <th>@Html.DisplayNameFor(model => model.alturaMaxima)</th>
+                <th>@Html.DisplayNameFor(model => model.fotoUrl)</th>
+                <th>@Html.DisplayNameFor(model => model.miFichaCuidados)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.miTipo.miNombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.nombreCientifico)</td>
+                    <td>@Html.DisplayFor(modelItem => item.misNombresVulgares)</td>
+                    <td>@Html.DisplayFor(modelItem => item.descripcion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ambiente)</td>
+                    <td>@Html.DisplayFor(modelItem => item.alturaMaxima)</td>
+                    <td>@Html.DisplayFor(modelItem => item.fotoUrl)</td>
+                    <td>@Html.DisplayFor(modelItem => item.miFichaCuidados)</td>
+                    <td><a asp-action="Edit" asp-rout-id=@item.nombreCientifico>Edit</a></td>
+                    <td><a asp-action="Details" asp-rout-id=@item.nombreCientifico>Details</a></td>
+                    <td><a asp-action="Delete" asp-rout-id=@item.nombreCientifico>Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DataAccess
 {
-    class RepositorioUsuario : IRepositorioUsuario
+    public class RepositorioUsuario : IRepositorioUsuario
     {
 
         IDbConnection _conn = null;
@@ -22,9 +22,14 @@ namespace DataAccess
 
         public IEnumerable Get()
         {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable GetUsuario(string mail, string password)
+        {
             ICollection<Usuario> result = new List<Usuario>();
             IDbCommand command = _conn.CreateCommand();
-            command.CommandText = "Select * From dbo.Usuario";
+            command.CommandText = $"Select * From dbo.Usuario where Mail = {mail} AND Password = {password}";
 
             try
             {
