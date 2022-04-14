@@ -39,7 +39,7 @@ namespace DataAccess
                         planta.nombreCientifico = (string)reader["NombreCientifico"];
                         planta.misNombresVulgares = (List<string>)reader["MisNombresVulgares"];
                         planta.descripcion = (string)reader["Descripcion"];
-                        planta.ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
+                        planta.ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                         planta.alturaMaxima = (double)reader["AlturaMaxima"];
                         planta.fotoUrl = (string)reader["FotoUrl"];
                         planta.miFichaCuidados = (FichaCuidados)reader["FichaCuidados"];
@@ -104,7 +104,7 @@ namespace DataAccess
                         planta.nombreCientifico = (string)reader["NombreCientifico"];
                         planta.misNombresVulgares = (List<string>)reader["MisNombresVulgares"];
                         planta.descripcion = (string)reader["Descripcion"];
-                        planta.ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
+                        planta.ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                         planta.alturaMaxima = (double)reader["AlturaMaxima"];
                         planta.fotoUrl = (string)reader["FotoUrl"];
                         planta.miFichaCuidados = (FichaCuidados)reader["FichaCuidados"];
@@ -149,7 +149,7 @@ namespace DataAccess
                         planta.nombreCientifico = (string)reader["NombreCientifico"];
                         planta.misNombresVulgares = (List<string>)reader["MisNombresVulgares"];
                         planta.descripcion = (string)reader["Descripcion"];
-                        planta.ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
+                        planta.ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                         planta.alturaMaxima = (double)reader["AlturaMaxima"];
                         planta.fotoUrl = (string)reader["FotoUrl"];
                         planta.miFichaCuidados = (FichaCuidados)reader["FichaCuidados"];
@@ -194,7 +194,7 @@ namespace DataAccess
                         planta.nombreCientifico = (string)reader["NombreCientifico"];
                         planta.misNombresVulgares = (List<string>)reader["MisNombresVulgares"];
                         planta.descripcion = (string)reader["Descripcion"];
-                        planta.ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
+                        planta.ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                         planta.alturaMaxima = (double)reader["AlturaMaxima"];
                         planta.fotoUrl = (string)reader["FotoUrl"];
                         planta.miFichaCuidados = (FichaCuidados)reader["FichaCuidados"];
