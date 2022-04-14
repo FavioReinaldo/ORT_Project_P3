@@ -12,7 +12,7 @@ namespace Dominio
         public string nombreCientifico { get; set; }
         public List<string> misNombresVulgares { get; set; }
         public string descripcion { get; set; }
-        public AmbienteEnum ambiente { get; }
+        public List<String> ambiente { get; }
         public double alturaMaxima { get; set; }
         public string fotoUrl { get; set; }
         public FichaCuidados miFichaCuidados { get; set; }
@@ -20,11 +20,11 @@ namespace Dominio
 
 
         public enum AmbienteEnum { Interior , Exterior , Mixta};
-        public Planta(string nombreCientifico, string descripcion, AmbienteEnum unambiente, double alturaMaxima, string fotoUrl) 
+        public Planta(string nombreCientifico, string descripcion, string unambiente, double alturaMaxima, string fotoUrl) 
         {
             this.nombreCientifico = nombreCientifico;
             this.descripcion = descripcion;
-            this.ambiente = unambiente;
+            this.ambiente.Add(unambiente);
             this.alturaMaxima = alturaMaxima;
             this.fotoUrl = fotoUrl;
         }
