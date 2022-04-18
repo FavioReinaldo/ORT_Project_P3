@@ -7,16 +7,21 @@ namespace Dominio
     public class Tipo
     {
         #region Atributos    
-        public string miNombre { get; set; }
-        public string miDescripcion { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
         #endregion
 
         #region Constructores
         //*************** METODO CONSTRUCTOR DE TIPO ***************
-        public Tipo(string miNombre, string miDescripcion)
+
+        public Tipo()
         {
-            this.miNombre = miNombre;
-            this.miDescripcion = miDescripcion;
+
+        }
+        public Tipo(string Nombre, string Descripcion)
+        {
+            this.Nombre = Nombre;
+            this.Descripcion = Descripcion;
         }
         #endregion
 
@@ -27,7 +32,7 @@ namespace Dominio
             bool resultado = false;
             if (miDescripcion != null && miDescripcion != "")
             {
-                this.miDescripcion = miDescripcion;
+                this.Descripcion = Descripcion;
                 resultado = true;
             }
             return resultado;

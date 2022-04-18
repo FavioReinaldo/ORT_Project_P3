@@ -1,0 +1,53 @@
+﻿@model Dominio.Tipo;
+
+
+@{
+    ViewData["Title"] = "Alta";
+}
+
+<h1>Alta Tipo</h1>
+
+<form action="/Tipo/Alta" method="post">
+    <div class="mb-3">
+
+        <label for="actividad" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre">
+
+    </div>
+    <div class="mb-3">
+        <label for="descripcion" class="form-label">Descripcion</label>
+        <input type="text" class="form-control" id="descripcion" name="descripcion">
+    </div>
+
+    <div class="col-12">
+        <button type="submit" id="button" class="btn btn-primary">Agregar</button>
+    </div>
+
+</form>
+
+@*<div class="row">
+    <div class="col-md-4">
+        <form action="/Tipo/Alta" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descripcion" class="control-label"></label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Alta" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@
+
+<div>
+    <a asp-action="Index"> Lista de tipos </a>
+</div>
+

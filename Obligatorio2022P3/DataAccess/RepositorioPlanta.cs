@@ -1,14 +1,24 @@
+<<<<<<< Updated upstream
 ﻿using Dominio;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Data;
+using Dominio;
+using System.Data.SqlClient;
+>>>>>>> Stashed changes
 
 namespace DataAccess
 {
     public class RepositorioPlanta : IRepositorioPlanta
     {
+<<<<<<< Updated upstream
         IDbConnection _conn = null;
         public RepositorioPlanta(IDbConnection connection)
         {
@@ -18,11 +28,19 @@ namespace DataAccess
         public void Delete(int id)
         {
             throw new NotImplementedException();
+=======
+        private IDbConnection _con;
+
+        public RepositorioPlanta(IDbConnection connection)
+        {
+            this._con = connection;
+>>>>>>> Stashed changes
         }
 
         public IEnumerable Get()
         {
             ICollection<Planta> result = new List<Planta>();
+<<<<<<< Updated upstream
             IDbCommand command = _conn.CreateCommand();
             command.CommandText = "Select * From dbo.Planta";
 
@@ -44,16 +62,38 @@ namespace DataAccess
                         planta.fotoUrl = (string)reader["FotoUrl"];
                         planta.miFichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                         result.Add(planta);
+=======
+
+            IDbCommand command = _con.CreateCommand();
+            command.CommandText = "Select * FROM dbo.Planta";
+            try
+            {
+                _con.Open();
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    Planta unaPlanta = null;
+                    while (reader.Read())
+                    {
+                        unaPlanta = new Planta();
+                        unaPlanta.nombreCientifico = (string)reader["NombreCientifico"];
+                        unaPlanta.descripcion = (string)reader["Descripcion"];
+
+                        result.Add(unaPlanta);
+>>>>>>> Stashed changes
                     }
                 }
             }
             catch (Exception)
             {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                 throw;
             }
             finally
             {
+<<<<<<< Updated upstream
 
                 if (_conn != null)
                 {
@@ -69,11 +109,19 @@ namespace DataAccess
         {
             throw new NotImplementedException();
         }
+=======
+                _con.Close();
+                _con.Dispose();
+            }
+            return result;
+        }
+>>>>>>> Stashed changes
 
         public void Insert(Planta obj)
         {
             throw new NotImplementedException();
         }
+<<<<<<< Updated upstream
 
         public void Save()
         {
@@ -219,5 +267,7 @@ namespace DataAccess
             }
             return result; ;
         }
+=======
+>>>>>>> Stashed changes
     }
 }

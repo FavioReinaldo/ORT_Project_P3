@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+<<<<<<< Updated upstream
 
 using System.Data;
 using System.Data.SqlClient;
 
+=======
+using System.Data;
+using System.Data.SqlClient;
+
+
+>>>>>>> Stashed changes
 namespace DataAccess
 {
     public class Connection : IDbConnection
     {
+<<<<<<< Updated upstream
 
         SqlConnection conn = null;
 
@@ -28,6 +36,27 @@ namespace DataAccess
         public IDbTransaction BeginTransaction()
         {
             throw new NotImplementedException();
+=======
+        SqlConnection con = null;
+        //Cada uno en su maquina modifique data source
+        private string connectionString = @"data source=DESKTOP-MJ8GCR2; database=Obligatori_P3; integrated security=true";
+
+        public string ConnectionString { get => connectionString; set => connectionString = value; }
+        public int ConnectionTimeout => con.ConnectionTimeout;
+
+        public Connection()
+        {
+            con = new SqlConnection(connectionString);
+        }
+
+        public string Database => con.Database;
+
+        public ConnectionState State => con.State;
+
+        public IDbTransaction BeginTransaction()
+        {
+            return con.BeginTransaction();
+>>>>>>> Stashed changes
         }
 
         public IDbTransaction BeginTransaction(IsolationLevel il)
@@ -42,22 +71,38 @@ namespace DataAccess
 
         public void Close()
         {
+<<<<<<< Updated upstream
             conn.Close();
+=======
+            con.Close();
+>>>>>>> Stashed changes
         }
 
         public IDbCommand CreateCommand()
         {
+<<<<<<< Updated upstream
             return conn.CreateCommand();
+=======
+            return con.CreateCommand();
+>>>>>>> Stashed changes
         }
 
         public void Dispose()
         {
+<<<<<<< Updated upstream
             conn.Dispose();
+=======
+            con.Dispose();
+>>>>>>> Stashed changes
         }
 
         public void Open()
         {
+<<<<<<< Updated upstream
             conn.Open();
+=======
+            con.Open();
+>>>>>>> Stashed changes
         }
     }
 }

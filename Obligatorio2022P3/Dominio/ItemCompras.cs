@@ -8,32 +8,18 @@ namespace Dominio
     {
         
         #region Atributos
-        private Planta plantaComprada;
-        private int cantidad;
-        private decimal precioCompraUnidad;
+        public Planta PlantaComprada { get; set; }
+        public int Cantidad { get; set; }
+        public decimal PrecioCompraUnidad { get; set; }
         #endregion
 
-        //Propiedades
-        public Planta PlantaComprada
-        {
-            get { return plantaComprada; }
-        }
-        public int Cantidad
-        {
-            get { return cantidad; }
-            set { cantidad = value; }
-        }
-        public decimal PrecioCompraUnidad
-        {
-            get { return precioCompraUnidad; }
-            set { precioCompraUnidad = value; }
-        }
+  
 
         #region Constructor
         public ItemCompras(int cantidad, decimal precioCompraUnidad)
         {
-            this.cantidad = cantidad;
-            this.precioCompraUnidad = precioCompraUnidad;
+            this.Cantidad = cantidad;
+            this.PrecioCompraUnidad = precioCompraUnidad;
         }
         #endregion
         //ToString

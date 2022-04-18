@@ -4,13 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+<<<<<<< Updated upstream
 using Dominio;
 using DataAccess;
 
+=======
+>>>>>>> Stashed changes
 namespace ObligatorioP3.Controllers
 {
     public class PlantaController : Controller
     {
+<<<<<<< Updated upstream
         public IActionResult Index()
         {
             return View();
@@ -57,5 +61,12 @@ namespace ObligatorioP3.Controllers
         }
 
 
+=======
+        RepositorioPlanta repositorio = new RepositorioPlanta(new Connection());
+        public IActionResult Index()
+        {
+            return View(repositorio.Get());
+        }
+>>>>>>> Stashed changes
     }
 }

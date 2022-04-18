@@ -8,7 +8,7 @@ namespace Dominio
     public class Planta
     {
         #region Atributos
-        public Tipo miTipo { get; set; }
+        public Tipo Tipo { get; set; }
         public string nombreCientifico { get; set; }
         public List<string> misNombresVulgares { get; set; }
         public string descripcion { get; set; }
@@ -17,14 +17,26 @@ namespace Dominio
         public string fotoUrl { get; set; }
         public FichaCuidados miFichaCuidados { get; set; }
         #endregion
+        public Planta()
+        {
 
+        }
 
+<<<<<<< Updated upstream
         public enum AmbienteEnum { Interior , Exterior , Mixta};
         public Planta(string nombreCientifico, string descripcion, string unambiente, double alturaMaxima, string fotoUrl) 
         {
             this.nombreCientifico = nombreCientifico;
             this.descripcion = descripcion;
             this.ambiente.Add(unambiente);
+=======
+        
+        public Planta(string nombreCientifico, string descripcion, double alturaMaxima, string fotoUrl) 
+        {
+            this.nombreCientifico = nombreCientifico;
+            this.descripcion = descripcion;
+            //ambiente = (string)unambiente;
+>>>>>>> Stashed changes
             this.alturaMaxima = alturaMaxima;
             this.fotoUrl = fotoUrl;
         }

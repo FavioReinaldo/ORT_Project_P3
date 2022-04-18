@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Dominio": {
+      "commandName": "Project"
+    },
+    "IIS Expres": {
+      "commandName": "Executable"
+    }
+  }
+}

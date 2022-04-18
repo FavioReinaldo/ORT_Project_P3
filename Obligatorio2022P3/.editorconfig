@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0006: Metadata file 'C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\Dominio\bin\Debug\netcoreapp3.1\ObligatorioP3.dll' could not be found
+dotnet_diagnostic.CS0006.severity = error

@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "Ffg9Dhu/zCP3rQoKYGuRK6tc9U0uYofQotdFg+A8GIpH1l8cOYyEVkfc3mFrr3rOiUFXfGoqlSU5+dRYzo2geQ==",
+=======
+  "dgSpecHash": "3NKeEgs7/9jwRWYp6yectbjI4fIYQ8X9sULMQA/fBzgtSRpq1xNwyRTYE+sdJyiQoPy5rWQVHybEhJIcT/ajeg==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio en git\\Obligatorio2022P3\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [

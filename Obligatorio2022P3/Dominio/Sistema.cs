@@ -80,7 +80,7 @@ namespace Dominio
                 while (i < tipos.Count && resultado == true)
                 {
 
-                    if (tipos[i].miNombre.ToUpper().Equals(miTipo.miNombre.ToUpper()))
+                    if (tipos[i].Nombre.ToUpper().Equals(miTipo.Nombre.ToUpper()))
                     {
                         resultado = false;
                     }
@@ -139,6 +139,7 @@ namespace Dominio
             {
                 foreach (Planta miPlanta in plantas)
                 {
+<<<<<<< Updated upstream
                     for (int i = 0; i < miPlanta.ambiente.Count; i++)
                     {
 
@@ -151,6 +152,12 @@ namespace Dominio
                     {
                         misPlantasBuscadas.Add(miPlanta);
                     }
+=======
+                    //if (miPlanta.ambiente == miAmbiente)
+                    //{
+                    //    misPlantasBuscadas.Add(miPlanta);
+                    //}
+>>>>>>> Stashed changes
                 }
             }
             return misPlantasBuscadas;
@@ -225,7 +232,7 @@ namespace Dominio
 
             while (eliminadoTipo && i < plantas.Count)
             {
-                if (plantas[i].miTipo == tipo)
+                if (plantas[i].Tipo == tipo)
                 {
                     eliminadoTipo = false;
                 }
@@ -276,7 +283,7 @@ namespace Dominio
             {
 
 
-                if (plantas[i].miTipo.miNombre.Equals(tipo))
+                if (plantas[i].Tipo.Nombre.Equals(tipo))
                 {
                     unaPlanta = plantas[i];
                 }
@@ -304,9 +311,9 @@ namespace Dominio
         public bool AgregarTipo(Tipo miTipo)
         {
             bool exito = false;
-            if (miTipo.ValidarTipo(miTipo.miNombre, miTipo.miDescripcion))
+            if (miTipo.ValidarTipo(miTipo.Nombre, miTipo.Descripcion))
             {
-                Tipo unT = new Tipo(miTipo.miNombre, miTipo.miDescripcion);
+                Tipo unT = new Tipo(miTipo.Nombre, miTipo.Descripcion);
                 tipos.Add(unT);
                 exito = true;
             }
@@ -338,7 +345,7 @@ namespace Dominio
             int i = 0;
             while (unT == null && i < tipos.Count)
             {
-                if (tipos[i].miNombre == nombre)
+                if (tipos[i].Nombre == nombre)
                 {
                     unT = tipos[i];
                 }

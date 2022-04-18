@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Dominio.Planta>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Plantas</h1>
+
+<p>
+    <a asp-action="Alta">Crear nueva Planta</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreCientifico)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.nombreCientifico)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.descripcion)
+                </td>
+
+                
+            </tr>
+        }
+
+    </tbody>
+</table>
