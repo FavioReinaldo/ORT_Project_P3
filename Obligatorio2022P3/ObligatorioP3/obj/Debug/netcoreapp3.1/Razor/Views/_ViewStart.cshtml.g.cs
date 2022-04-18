@@ -1,6 +1,10 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #pragma checksum "D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\Views\_ViewStart.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "7091c65830b0329e613be026ede8a57552863778"
+=======
+#pragma checksum "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewStart.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "7091c65830b0329e613be026ede8a57552863778"
+>>>>>>> Stashed changes
 =======
 #pragma checksum "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewStart.cshtml" "{ff1816ec-aa5e-4d10-87f7-6f4963833460}" "7091c65830b0329e613be026ede8a57552863778"
 >>>>>>> Stashed changes
@@ -23,7 +27,11 @@ namespace AspNetCore
 #nullable restore
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\Views\_ViewImports.cshtml"
+=======
+#line 1 "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -38,7 +46,11 @@ using ObligatorioP3;
 #nullable restore
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 2 "D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\Views\_ViewImports.cshtml"
+=======
+#line 2 "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewImports.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 2 "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewImports.cshtml"
 >>>>>>> Stashed changes
@@ -60,7 +72,11 @@ using ObligatorioP3.Models;
 #nullable restore
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #line 1 "D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\Views\_ViewStart.cshtml"
+=======
+#line 1 "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewStart.cshtml"
+>>>>>>> Stashed changes
 =======
 #line 1 "C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\Views\_ViewStart.cshtml"
 >>>>>>> Stashed changes

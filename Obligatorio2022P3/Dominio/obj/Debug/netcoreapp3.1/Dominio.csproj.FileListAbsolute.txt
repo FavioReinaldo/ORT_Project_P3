@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.AssemblyReference.cache
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.GeneratedMSBuildEditorConfig.editorconfig
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
@@ -13,6 +14,8 @@ D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\Dominio\ob
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.AssemblyReference.cache
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
@@ -24,6 +27,9 @@ C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Ob
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

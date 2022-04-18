@@ -24,6 +24,7 @@ namespace Dominio
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         public enum AmbienteEnum { Interior , Exterior , Mixta};
         public Planta(string nombreCientifico, string descripcion, string unambiente, double alturaMaxima, string fotoUrl) 
         {
@@ -33,6 +34,8 @@ namespace Dominio
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         
         public Planta(string nombreCientifico, string descripcion, double alturaMaxima, string fotoUrl) 
         {
@@ -40,6 +43,9 @@ namespace Dominio
             this.descripcion = descripcion;
             //ambiente = (string)unambiente;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using System.Text;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 using System.Data;
 using System.Data.SqlClient;
 
+=======
+=======
+>>>>>>> Stashed changes
+using System.Data;
+using System.Data.SqlClient;
+
+
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 =======
 using System.Data;
 using System.Data.SqlClient;
@@ -14,15 +24,12 @@ using System.Data.SqlClient;
 
 >>>>>>> Stashed changes
 =======
-using System.Data;
-using System.Data.SqlClient;
-
-
 >>>>>>> Stashed changes
 namespace DataAccess
 {
     public class Connection : IDbConnection
     {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -47,6 +54,8 @@ namespace DataAccess
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         SqlConnection con = null;
         //Cada uno en su maquina modifique data source
         private string connectionString = @"data source=DESKTOP-MJ8GCR2; database=Obligatori_P3; integrated security=true";
@@ -67,6 +76,9 @@ namespace DataAccess
         {
             return con.BeginTransaction();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -86,7 +98,11 @@ namespace DataAccess
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             conn.Close();
+=======
+            con.Close();
+>>>>>>> Stashed changes
 =======
             con.Close();
 >>>>>>> Stashed changes
@@ -99,7 +115,11 @@ namespace DataAccess
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             return conn.CreateCommand();
+=======
+            return con.CreateCommand();
+>>>>>>> Stashed changes
 =======
             return con.CreateCommand();
 >>>>>>> Stashed changes
@@ -112,7 +132,11 @@ namespace DataAccess
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             conn.Dispose();
+=======
+            con.Dispose();
+>>>>>>> Stashed changes
 =======
             con.Dispose();
 >>>>>>> Stashed changes
@@ -125,7 +149,11 @@ namespace DataAccess
         {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             conn.Open();
+=======
+            con.Open();
+>>>>>>> Stashed changes
 =======
             con.Open();
 >>>>>>> Stashed changes

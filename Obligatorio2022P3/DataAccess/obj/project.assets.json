@@ -133,6 +133,7 @@
       },
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "Dominio/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -144,6 +145,8 @@
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
       "ObligatorioP3/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -153,6 +156,9 @@
         "runtime": {
           "bin/placeholder/ObligatorioP3.dll": {}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -476,7 +482,11 @@
     },
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "Dominio/1.0.0": {
+=======
+    "ObligatorioP3/1.0.0": {
+>>>>>>> Stashed changes
 =======
     "ObligatorioP3/1.0.0": {
 >>>>>>> Stashed changes
@@ -492,7 +502,11 @@
     ".NETCoreApp,Version=v3.1": [
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "Dominio >= 1.0.0",
+=======
+      "ObligatorioP3 >= 1.0.0",
+>>>>>>> Stashed changes
 =======
       "ObligatorioP3 >= 1.0.0",
 >>>>>>> Stashed changes

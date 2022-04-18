@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
@@ -16,6 +17,8 @@ D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\DataAccess
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
@@ -30,6 +33,9 @@ C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Ob
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

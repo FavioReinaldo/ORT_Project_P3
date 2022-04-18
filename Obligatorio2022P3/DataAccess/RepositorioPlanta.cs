@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿using Dominio;
 using System;
 using System.Collections;
@@ -9,6 +10,8 @@ using System.Text;
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections;
@@ -16,6 +19,9 @@ using System.Data;
 using Dominio;
 using System.Data.SqlClient;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -24,6 +30,7 @@ namespace DataAccess
 {
     public class RepositorioPlanta : IRepositorioPlanta
     {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
         IDbConnection _conn = null;
@@ -38,12 +45,17 @@ namespace DataAccess
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
         private IDbConnection _con;
 
         public RepositorioPlanta(IDbConnection connection)
         {
             this._con = connection;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -52,6 +64,7 @@ namespace DataAccess
         public IEnumerable Get()
         {
             ICollection<Planta> result = new List<Planta>();
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
             IDbCommand command = _conn.CreateCommand();
@@ -78,6 +91,8 @@ namespace DataAccess
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
             IDbCommand command = _con.CreateCommand();
             command.CommandText = "Select * FROM dbo.Planta";
@@ -95,6 +110,9 @@ namespace DataAccess
 
                         result.Add(unaPlanta);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -105,7 +123,10 @@ namespace DataAccess
             {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -114,6 +135,7 @@ namespace DataAccess
             }
             finally
             {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -134,12 +156,17 @@ namespace DataAccess
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
                 _con.Close();
                 _con.Dispose();
             }
             return result;
         }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -148,6 +175,7 @@ namespace DataAccess
         {
             throw new NotImplementedException();
         }
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -295,6 +323,8 @@ namespace DataAccess
             }
             return result; ;
         }
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
