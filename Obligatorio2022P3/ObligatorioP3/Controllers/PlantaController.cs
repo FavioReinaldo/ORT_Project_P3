@@ -27,10 +27,33 @@ namespace ObligatorioP3.Controllers
         {
             if(miAlturaMaxima > 0)
             {
-            return View("ListarPlanta", repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));//Ver si sobreescribe sino crear una vista nueva             
+            return View(repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));             
 
             }
-            return View();
+            ViewBag.Mensaje = "Los datos ingresados no son correctos";
+            return View("ListarPlanta");
+        }
+
+        public IActionResult ListarPlantaDeXCentimetrosOMas(double miAlturaMinima)
+        {
+            if (miAlturaMinima > 0)
+            {
+                return View(repositorio.GetDeXCentimetrosOMas(miAlturaMinima));
+
+            }
+            ViewBag.Mensaje = "Los datos ingresados no son correctos";
+            return View("ListarPlanta");
+        }
+
+        public IActionResult ListarPlantaPorAmbiente(string miAmbiente)
+        {
+            if (miAmbiente != null && miAmbiente != "")
+            {
+                return View(repositorio.GetPorAmbiente(miAmbiente));
+
+            }
+            ViewBag.Mensaje = "Los datos ingresados no son correctos";
+            return View("ListarPlanta");
         }
 
 

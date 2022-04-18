@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Planta>
+﻿@model IEnumerable<Dominio.Planta>
 
 @{ ViewData["title"] = "ListarPlanta";
 }
@@ -9,12 +9,32 @@
     <a asp-action="Create">Nueva Planta</a>
 </p>
 <!---->
-<h2>Filtrar Lista de Plantas</h2>
+<h2>Filtrar Lista de Plantas por altura maxima</h2>
 <form method="post" action="~/Planta/ListarPlantaMasBajaQueXCentimetros">
     <label>Filtrar por altura, mas bajas que:</label><br>
-    <input type="number" name="altura" id="miAlturaMaxima" />
+    <input type="number" name="altura" id="miAlturaMaxima"/>
     <br /><br>
-    <input type="submit" value="Filtrar" onclick="return ValidarDatos();" />
+    <input type="submit" value="Filtrar" onclick="return ValidarDatosAlturaMaxima();" />
+</form>
+<br>
+<p>@ViewBag.Mensaje</p>
+
+<h2>Filtrar Lista de Plantas por altura minima</h2>
+<form method="post" action="~/Planta/BuscarPlantaDeXCentimetrosOMas">
+    <label>Filtrar por altura, mas altas que:</label><br>
+    <input type="number" name="altura" id="miAlturaMinima" />
+    <br /><br>
+    <input type="submit" value="Filtrar" onclick="return ValidarDatosAlturaMinima();" />
+</form>
+<br>
+<p>@ViewBag.Mensaje</p>
+
+<h2>Filtrar Lista de Plantas por Ambiente</h2>
+<form method="post" action="~/Planta/BuscarPlantaPorAmbiente">
+    <label>Filtrar por ambiente:</label><br>
+    <input type="text" name="Ambiente" id="miAmbiente" />
+    <br /><br>
+    <input type="submit" value="Filtrar" onclick="return ValidarDatosAmbiente();" />
 </form>
 <br>
 <p>@ViewBag.Mensaje</p>
@@ -47,16 +67,16 @@
                 <td>@Html.DisplayFor(modelItem => item.alturaMaxima)</td>
                 <td>@Html.DisplayFor(modelItem => item.fotoUrl)</td>
                 <td>@Html.DisplayFor(modelItem => item.miFichaCuidados)</td>
-                <td><a asp-action="Edit" asp-rout-id=@item.Id>Edit</a></td>
-                <td><a asp-action="Details" asp-rout-id=@item.Id>Details</a></td>
-                <td><a asp-action="Delete" asp-rout-id=@item.Id>Delete</a></td>
+                <td><a asp-action="Edit" asp-rout-id=@item.nombreCientifico>Edit</a></td>
+                <td><a asp-action="Details" asp-rout-id=@item.nombreCientifico>Details</a></td>
+                <td><a asp-action="Delete" asp-rout-id=@item.nombreCientifico>Delete</a></td>
             </tr>
         }
     </tbody>
 </table>
 
 <script>
-    function ValidarDatos() {
+    function ValidarDatosAlturaMaxima() {
         let altura = parseFloat(document.getElementById("miAlturaMaxima").value);
         let validacion = true;
 
@@ -65,6 +85,29 @@
             validacion = false;
         }
 
+        return validacion;
+    }
+
+    function ValidarDatosAlturaMinima() {
+        let altura = parseFloat(document.getElementById("miAlturaMinima").value);
+        let validacion = true;
+
+        if (isNaN(altura) || altura <= 0) {
+            alert("Error en la altura ingresada");
+            validacion = false;
+        }
+
+        return validacion;
+    }
+
+    function ValidarDatosAmbiente() {
+        let miAmbiente = document.getElementById("miAmbiente").value;
+        let validacion = true;
+
+        if (miAmbiente != null && miAmbiente != "") {
+            alert("Error en la altura ingresada");
+            validacion = false;
+        }
         return validacion;
     }
 </script>

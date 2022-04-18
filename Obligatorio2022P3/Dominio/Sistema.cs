@@ -6,15 +6,15 @@ namespace Dominio
 {
     public class Sistema
     {
-        
+
         #region Listas
-        
+
         private List<Compra> compras = new List<Compra>();
         private List<Usuario> usuarios = new List<Usuario>();
         private List<Planta> plantas = new List<Planta>();
         private List<Tipo> tipos = new List<Tipo>();
-        #endregion        
-       
+        #endregion
+
         #region Atributos Sistema        
         public List<Compra> Compras
         {
@@ -52,15 +52,15 @@ namespace Dominio
 
         #region Método Constructor de Sistema
         public Sistema() //Metodo constructor de Object
-        {            
-            PreCargarDatosUsuarios();            
+        {
+            PreCargarDatosUsuarios();
         }
         #endregion
 
         #region Método PreCargarDatosUsuarios
         //*************** CARGA DE DATOS DE USUARIOS HARCODEADOS ***************        
         private void PreCargarDatosUsuarios()
-        {            
+        {
             this.usuarios.Add(new Usuario("Usuario1@mail.com", "Usuario1"));
             this.usuarios.Add(new Usuario("Usuario2@mail.com", "Usuario2"));
             this.usuarios.Add(new Usuario("Usuario3@mail.com", "Usuario3"));
@@ -85,7 +85,7 @@ namespace Dominio
                         resultado = false;
                     }
                     i++;
-                    
+
                 }
             }
             return resultado;
@@ -134,12 +134,20 @@ namespace Dominio
         {
 
             List<Planta> misPlantasBuscadas = new List<Planta>();
-
+            bool existe = false;
             if (miAmbiente != "")
             {
                 foreach (Planta miPlanta in plantas)
                 {
-                    if (miPlanta.ambiente == miAmbiente)
+                    for (int i = 0; i < miPlanta.ambiente.Count; i++)
+                    {
+
+                        if (miPlanta.ambiente[i] == miAmbiente)
+                        {
+                            existe = true;
+                        }
+                    }
+                    if (existe)
                     {
                         misPlantasBuscadas.Add(miPlanta);
                     }
@@ -201,7 +209,7 @@ namespace Dominio
         {
             bool tipoEliminado = false;
             Tipo unTipo = BuscarTipo(nombre);
-            if ( unTipo != null)
+            if (unTipo != null)
             {
                 tipoEliminado = true;
             }
@@ -214,14 +222,14 @@ namespace Dominio
         {
             bool eliminadoTipo = true;
             int i = 0;
-            
+
             while (eliminadoTipo && i < plantas.Count)
             {
                 if (plantas[i].miTipo == tipo)
                 {
                     eliminadoTipo = false;
                 }
-                
+
                 i++;
             }
             return eliminadoTipo;
@@ -233,7 +241,7 @@ namespace Dominio
         public bool AltaPlanta(Planta planta)
         {
             bool altaPlanta = false;
-            if(planta != null)
+            if (planta != null)
             {
                 plantas.Add(planta);
                 altaPlanta = true;
@@ -266,7 +274,7 @@ namespace Dominio
             Planta unaPlanta = null;
             while (unaPlanta == null && i < plantas.Count)
             {
-                
+
 
                 if (plantas[i].miTipo.miNombre.Equals(tipo))
                 {
@@ -353,7 +361,7 @@ namespace Dominio
             
             foreach (Usuario miUsuario in usuarios)
             {
-                repositorioUsuario.Get()
+                repositorioUsuario.Get();
             }
             return misPlantas;
         }

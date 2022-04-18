@@ -9,7 +9,9 @@ using Dominio;
 namespace DataAccess
 {
     interface IRepositorioPlanta:IRepositorio<Planta>
-    {
+    { 
         IEnumerable GetMasBajasQueXCentimetros(double miAlturaMaxima);
+        IEnumerable GetDeXCentimetrosOMas(double miAlturaMaxima);
+        IEnumerable GetPorAmbiente(double miAmbiente);
     }
 }

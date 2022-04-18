@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Http;
 using Dominio;
+using DataAccess;
 
 namespace ObligatorioP3.Controllers
 {
@@ -42,12 +43,17 @@ namespace ObligatorioP3.Controllers
             return View(); 
         }
 
+
+        IRepositorio<Usuario> repositorio = new RepositorioUsuario(new Connection());
+
+
         public IActionResult VerificacionLogin(string mail, string password)
         {
             if (mail != null && password != null && mail != "" && password != "" && Sistema.Instancia.ValidarLogIn(mail, password))
             {
+                    //repositorio.GetUsuario(mail, password);       //No se como guardar y validar de aca el mail y el password en variables para trabajar con ellos
                     HttpContext.Session.SetString("Mail", mail);   
-                    return RedirectToAction("Index", "Home");                 
+                    return RedirectToAction("Index", "Home");
             }
             else
             {
