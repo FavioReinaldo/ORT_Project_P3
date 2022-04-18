@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.csproj.AssemblyReference.cache
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.GeneratedMSBuildEditorConfig.editorconfig
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.AssemblyInfoInputs.cache
@@ -27,6 +28,8 @@ D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\Obligatori
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.dll
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.pdb
 =======
+=======
+>>>>>>> Stashed changes
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\bin\Debug\netcoreapp3.1\ObligatorioP3.exe
@@ -77,4 +80,7 @@ C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Ob
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.dll
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.pdb
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio en git\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.genruntimeconfig.cache
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

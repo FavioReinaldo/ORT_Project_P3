@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,6 +16,8 @@ namespace DataAccess
         IEnumerable GetDeXCentimetrosOMas(double miAlturaMaxima);
         IEnumerable GetPorAmbiente(double miAmbiente);
 =======
+=======
+>>>>>>> Stashed changes
 ﻿using Dominio;
 using System;
 using System.Collections.Generic;
@@ -26,6 +29,9 @@ namespace DataAccess
     public interface IRepositorioPlanta : IRepositorio<Planta>
     {
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }

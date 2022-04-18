@@ -140,6 +140,7 @@ namespace Dominio
                 foreach (Planta miPlanta in plantas)
                 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     for (int i = 0; i < miPlanta.ambiente.Count; i++)
                     {
 
@@ -153,10 +154,15 @@ namespace Dominio
                         misPlantasBuscadas.Add(miPlanta);
                     }
 =======
+=======
+>>>>>>> Stashed changes
                     //if (miPlanta.ambiente == miAmbiente)
                     //{
                     //    misPlantasBuscadas.Add(miPlanta);
                     //}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                 }
             }
@@ -282,7 +288,10 @@ namespace Dominio
             while (unaPlanta == null && i < plantas.Count)
             {
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
                 if (plantas[i].Tipo.Nombre.Equals(tipo))
                 {
                     unaPlanta = plantas[i];
