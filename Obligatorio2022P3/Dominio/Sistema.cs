@@ -142,6 +142,7 @@ namespace Dominio
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                     for (int i = 0; i < miPlanta.ambiente.Count; i++)
                     {
 
@@ -159,12 +160,17 @@ namespace Dominio
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
                     //if (miPlanta.ambiente == miAmbiente)
                     //{
                     //    misPlantasBuscadas.Add(miPlanta);
                     //}
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -296,7 +302,10 @@ namespace Dominio
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======

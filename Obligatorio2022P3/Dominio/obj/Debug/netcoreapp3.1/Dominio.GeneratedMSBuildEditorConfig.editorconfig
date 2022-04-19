@@ -2,7 +2,11 @@ is_global = true
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 build_property.RootNamespace = Dominio
+=======
+build_property.RootNamespace = ObligatorioP3
+>>>>>>> Stashed changes
 =======
 build_property.RootNamespace = ObligatorioP3
 >>>>>>> Stashed changes

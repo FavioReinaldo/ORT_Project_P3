@@ -11,11 +11,15 @@ namespace DataAccess
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         T GetById(int id);
         void Insert(T obj);
         void Delete(int id);
         void Update(T obj);
         void Save();
+=======
+        void Insert(T obj);
+>>>>>>> Stashed changes
 =======
         void Insert(T obj);
 >>>>>>> Stashed changes
