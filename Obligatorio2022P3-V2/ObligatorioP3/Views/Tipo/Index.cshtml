@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Dominio.Tipo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Tipos</h1>
+
+<p>
+    <a asp-action="Alta">Crear un nuevo tipo</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.Descripcion)
+                </td>
+           
+                <td>
+
+                    <a asp-action="Delete" asp-route-id="@item.Nombre"> Eliminar </a>
+                    <a asp-action="Modificar" asp-route-id="@item.Nombre"> Modificar </a>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Dominio.Planta>
+
+@{ ViewData["title"] = "ListarPlanta";
+}
+
+<h1>Lista de Plantas</h1>
+
+<p>
+    <a asp-action="Alta">Crear nueva planta</a>
+</p>
+<!---->
+<h2>Filtrar Lista de Plantas por altura maxima</h2>
+<form method="post" action="~/Planta/ListarPlantaMasBajaQueXCentimetros">
+    <label>Filtrar por altura, mas bajas que:</label><br>
+    <input type="number" name="altura" id="miAlturaMaxima"/>
+    <br /><br>
+    <input type="submit" value="Filtrar" onclick="return ValidarDatosAlturaMaxima();" />
+</form>
+<br>
+<p>@ViewBag.Mensaje</p>
+
+<h2>Filtrar Lista de Plantas por altura minima</h2>
+<form method="post" action="~/Planta/BuscarPlantaDeXCentimetrosOMas">
+    <label>Filtrar por altura, mas altas que:</label><br>
+    <input type="number" name="altura" id="miAlturaMinima" />
+    <br /><br>
+    <input type="submit" value="Filtrar" onclick="return ValidarDatosAlturaMinima();" />
+</form>
+<br>
+<p>@ViewBag.Mensaje</p>
+
+<h2>Filtrar Lista de Plantas por Ambiente</h2>
+<form method="post" action="~/Planta/BuscarPlantaPorAmbiente">
+    <label>Filtrar por ambiente:</label><br>
+    <input type="text" name="Ambiente" id="miAmbiente" />
+    <br /><br>
+    <input type="submit" value="Filtrar" onclick="return ValidarDatosAmbiente();" />
+</form>
+<br>
+<p>@ViewBag.Mensaje</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>@Html.DisplayNameFor(model => model.NombreCientifico)</th>
+            <th>@Html.DisplayNameFor(model => model.NombresVulgares)</th>
+            <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+            <th>@Html.DisplayNameFor(model => model.Ambiente)</th>
+            <th>@Html.DisplayNameFor(model => model.AlturaMaxima)</th>
+            <th>@Html.DisplayNameFor(model => model.FotoUrl)</th>
+            <th>@Html.DisplayNameFor(model => model.FichaCuidados)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th>@Html.DisplayFor(modelitem => item.MiTipo)</th>
+                <th>@Html.DisplayFor(modelitem => item.NombreCientifico)</th>
+                <th>@Html.DisplayFor(modelitem => item.NombresVulgares)</th>
+                <th>@Html.DisplayFor(modelitem => item.Descripcion)</th>
+                <th>@Html.DisplayFor(modelitem => item.Ambiente)</th>
+                <th>@Html.DisplayFor(modelitem => item.AlturaMaxima)</th>
+                <th>@Html.DisplayFor(modelitem => item.FotoUrl)</th>
+                <th>@Html.DisplayFor(modelitem => item.FichaCuidados)</th>
+                <td><a asp-action="Edit" asp-rout-id=@item.NombreCientifico>Edit</a></td>
+                <td><a asp-action="Details" asp-rout-id=@item.NombreCientifico>Details</a></td>
+                <td><a asp-action="Delete" asp-rout-id=@item.NombreCientifico>Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function ValidarDatosAlturaMaxima() {
+        let altura = parseFloat(document.getElementById("miAlturaMaxima").value);
+        let validacion = true;
+
+        if (isNaN(altura) || altura <= 0) {
+            alert("Error en la altura ingresada");
+            validacion = false;
+        }
+
+        return validacion;
+    }
+
+    function ValidarDatosAlturaMinima() {
+        let altura = parseFloat(document.getElementById("miAlturaMinima").value);
+        let validacion = true;
+
+        if (isNaN(altura) || altura <= 0) {
+            alert("Error en la altura ingresada");
+            validacion = false;
+        }
+
+        return validacion;
+    }
+
+    function ValidarDatosAmbiente() {
+        let miAmbiente = document.getElementById("miAmbiente").value;
+        let validacion = true;
+
+        if (miAmbiente != null && miAmbiente != "") {
+            alert("Error en la altura ingresada");
+            validacion = false;
+        }
+        return validacion;
+    }
+</script>
