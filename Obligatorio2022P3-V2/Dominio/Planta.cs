@@ -70,7 +70,7 @@ namespace Dominio
 
         public bool IsValid()
         {
-            return !string.IsNullOrEmpty(Nombre);
+            return !string.IsNullOrEmpty(NombreCientifico);
         }
 
     }

@@ -225,7 +225,7 @@ namespace Dominio
 
             while (eliminadoTipo && i < plantas.Count)
             {
-                if (plantas[i].MiTipo == tipo)
+                if (plantas[i].NombreTipo == tipo.Nombre)
                 {
                     eliminadoTipo = false;
                 }
@@ -276,7 +276,7 @@ namespace Dominio
             {
 
 
-                if (plantas[i].MiTipo.Nombre.Equals(tipo))
+                if (plantas[i].NombreTipo.Equals(tipo))
                 {
                     unaPlanta = plantas[i];
                 }
