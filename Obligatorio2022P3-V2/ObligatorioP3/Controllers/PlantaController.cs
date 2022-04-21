@@ -6,11 +6,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ObligatorioP3.Models;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+
+
 
 namespace ObligatorioP3.Controllers
 {
     public class PlantaController : Controller
     {
+
+        private IWebHostEnvironment _environment;
+        public PlantaController(IWebHostEnvironment environment)
+        {
+            _environment = environment;
+        }
         public IActionResult Index()
         {
             return View();
@@ -21,12 +32,13 @@ namespace ObligatorioP3.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Alta(Planta unaPlanta)
+        public ActionResult Alta(Planta unaPlanta, IFormFile imagen)
         {
             if (unaPlanta.IsValid())
             {
                 try
                 {
+
                     repositorio.Insert(unaPlanta);
                     return RedirectToAction(nameof(Index));
                 }
@@ -41,6 +53,35 @@ namespace ObligatorioP3.Controllers
             }
 
 
+        }
+
+        private bool GuardarImagen(IFormFile imagen, Planta unaPlanta)
+        {
+            if (imagen == null || unaPlanta == null)
+                return false;
+            
+            string rutaFisicaWwwRoot = _environment.WebRootPath;
+            
+            string nombreImagen = imagen.FileName;
+            string rutaFisicaFoto = Path.Combine
+            (rutaFisicaWwwRoot, "imagenes", "fotosPlanta", nombreImagen);
+            
+            try
+            {
+                
+                using (FileStream f = new FileStream(rutaFisicaFoto, FileMode.Create))
+                {
+                    
+                    imagen.CopyTo(f);
+                }
+
+                unaPlanta.FotoPlanta = nombreImagen;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
 
         IRepositorio<Planta> repositorio = new RepositorioPlanta(new Connection());

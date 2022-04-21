@@ -14,20 +14,20 @@ namespace Dominio
         public string Descripcion { get; set; }
         public List<String> Ambiente { get; }
         public double AlturaMaxima { get; set; }
-        public string FotoUrl { get; set; }
+        public string FotoPlanta { get; set; }
         public FichaCuidados FichaCuidados { get; set; }
         #endregion
 
 
         
-        public Planta(string NombreTipo, string NombreCientifico, string Descripcion, string Unambiente, double AlturaMaxima, string FotoUrl) 
+        public Planta(string NombreTipo, string NombreCientifico, string Descripcion, string Unambiente, double AlturaMaxima, string FotoPlanta) 
         {
             this.NombreTipo = NombreTipo;
             this.NombreCientifico = NombreCientifico;
             this.Descripcion = Descripcion;
             this.Ambiente.Add(Unambiente);
             this.AlturaMaxima = AlturaMaxima;
-            this.FotoUrl = FotoUrl;
+            this.FotoPlanta = FotoPlanta;
         }
         public Planta()
         {
