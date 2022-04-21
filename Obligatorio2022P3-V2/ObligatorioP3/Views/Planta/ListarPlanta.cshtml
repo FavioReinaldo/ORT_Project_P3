@@ -50,7 +50,7 @@
             <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
             <th>@Html.DisplayNameFor(model => model.Ambiente)</th>
             <th>@Html.DisplayNameFor(model => model.AlturaMaxima)</th>
-            <th>@Html.DisplayNameFor(model => model.FotoUrl)</th>
+            <th>@Html.DisplayNameFor(model => model.FotoPlanta)</th>
             <th>@Html.DisplayNameFor(model => model.FichaCuidados)</th>
             <th></th>
         </tr>
@@ -65,7 +65,7 @@
                 <th>@Html.DisplayFor(modelitem => item.Descripcion)</th>
                 <th>@Html.DisplayFor(modelitem => item.Ambiente)</th>
                 <th>@Html.DisplayFor(modelitem => item.AlturaMaxima)</th>
-                <th>@Html.DisplayFor(modelitem => item.FotoUrl)</th>
+                <th><a asp-action="VisualisarImagen" asp-rout-id=@item.NombreCientifico>Ver Imagen</a></th>
                 <th>@Html.DisplayFor(modelitem => item.FichaCuidados)</th>
                 <td><a asp-action="Edit" asp-rout-id=@item.NombreCientifico>Edit</a></td>
                 <td><a asp-action="Details" asp-rout-id=@item.NombreCientifico>Details</a></td>

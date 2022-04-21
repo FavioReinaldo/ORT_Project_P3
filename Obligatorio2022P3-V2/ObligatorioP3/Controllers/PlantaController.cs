@@ -38,7 +38,7 @@ namespace ObligatorioP3.Controllers
             {
                 try
                 {
-
+                    GuardarImagen(imagen, unaPlanta);
                     repositorio.Insert(unaPlanta);
                     return RedirectToAction(nameof(Index));
                 }
@@ -82,6 +82,10 @@ namespace ObligatorioP3.Controllers
             {
                 return false;
             }
+        }
+        public IActionResult VisualisarImagen()
+        {
+            return View();
         }
 
         IRepositorio<Planta> repositorio = new RepositorioPlanta(new Connection());

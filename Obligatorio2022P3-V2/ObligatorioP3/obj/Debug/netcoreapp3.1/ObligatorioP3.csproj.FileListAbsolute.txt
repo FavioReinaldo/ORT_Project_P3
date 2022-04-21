@@ -452,3 +452,14 @@ C:\Users\Nicol\Downloads\Obligatorio1Programacion3-main (1)\Obligatorio1Programa
 C:\Users\Nicol\Downloads\Obligatorio1Programacion3-main (1)\Obligatorio1Programacion3-main\Obligatorio2022P3\ObligatorioP3\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nicol\Downloads\Obligatorio1Programacion3-main (1)\Obligatorio1Programacion3-main\Obligatorio2022P3\ObligatorioP3\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Nicol\Downloads\Obligatorio1Programacion3-main (1)\Obligatorio1Programacion3-main\Obligatorio2022P3\ObligatorioP3\obj\Debug\netcoreapp3.1\Razor\Views\Tipo\Delete.cshtml.g.cs
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.csproj.AssemblyReference.cache
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.AssemblyInfoInputs.cache
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.AssemblyInfo.cs
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.csproj.CoreCompileInputs.cache
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.RazorAssemblyInfo.cache
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.RazorAssemblyInfo.cs
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.dll
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.pdb
