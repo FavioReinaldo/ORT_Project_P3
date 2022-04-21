@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\Nicol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\Dominio.csproj"
+              "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -102,14 +102,14 @@
         }
       }
     },
-    "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\Nicol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",

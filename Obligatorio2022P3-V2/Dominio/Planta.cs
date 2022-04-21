@@ -8,7 +8,7 @@ namespace Dominio
     public class Planta
     {
         #region Atributos
-        public Tipo MiTipo { get; set; }
+        public string  NombreTipo { get; set; }
         public string NombreCientifico { get; set; }
         public List<string> NombresVulgares { get; set; }
         public string Descripcion { get; set; }
@@ -20,9 +20,9 @@ namespace Dominio
 
 
         
-        public Planta(Tipo MiTipo, string NombreCientifico, string Descripcion, string Unambiente, double AlturaMaxima, string FotoUrl) 
+        public Planta(string NombreTipo, string NombreCientifico, string Descripcion, string Unambiente, double AlturaMaxima, string FotoUrl) 
         {
-            this.MiTipo = MiTipo;
+            this.NombreTipo = NombreTipo;
             this.NombreCientifico = NombreCientifico;
             this.Descripcion = Descripcion;
             this.Ambiente.Add(Unambiente);

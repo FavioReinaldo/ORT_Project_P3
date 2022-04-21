@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TEGjJl9p3eiLOz0IyYOV+uEYzGpUa6zU5AQqiLjsUonXk42TATq11ajUHRIF1vveQ7mSs/YNpOzAEZX9Jh58Cw==",
+  "dgSpecHash": "lSqdEB+o4/qCf0ikgnTUPPSSaVa0Yki3p6Z/zCB2fetqIV/fMzqihvF2FNw2UXdo6zP5rseJ1nvVWe/ERV5S9w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nicol\\Downloads\\Obligatorio1Programacion3-main (1)\\Obligatorio1Programacion3-main\\Obligatorio2022P3\\Dominio\\Dominio.csproj",
+  "projectFilePath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nicol\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\2.2.0\\microsoft.aspnetcore.cryptography.internal.2.2.0.nupkg.sha512",
     "C:\\Users\\Nicol\\.nuget\\packages\\microsoft.aspnetcore.dataprotection\\2.2.0\\microsoft.aspnetcore.dataprotection.2.2.0.nupkg.sha512",
