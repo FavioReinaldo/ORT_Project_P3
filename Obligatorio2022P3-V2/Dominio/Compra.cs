@@ -7,26 +7,15 @@ namespace Dominio
     {
         
         #region Atributos
-        private DateTime fecha;
-        private List<ItemCompras> compras = new List<ItemCompras>();
-        #endregion
-        
-        #region Propiedades
-        public DateTime Fecha
+        public DateTime Fecha { get; set; }
+        public List<ItemCompras> Compras = new List<ItemCompras>();
+    #endregion
+
+
+    #region Constructor
+    public Compra(DateTime Fecha)
         {
-            get { return fecha; }
-            set { fecha = value; }
-        }
-        public List<ItemCompras> Compras
-        {
-            get { return compras; }
-        }
-        #endregion
-        
-        #region Constructor
-        public Compra(DateTime fecha)
-        {
-            this.fecha = fecha;
+            this.Fecha = Fecha;
             
         }
         #endregion

@@ -7,25 +7,15 @@ namespace Dominio
     public class Plaza : Compra
     {
         //Atributos
-        private double iva;
-        private double flete;
+        public double Iva { get; set; }
+        public double Flete { get; set; }
         //Propiedades
-        public double Iva
-        {
-            get { return iva; }
-            set { iva = value; }
-        }
-        public double Flete
-        {
-            get { return flete; }
-            set { flete = value; }
-        }
 
         //constructor
-        public Plaza(DateTime fecha, double iva, double flete) : base(fecha)
+        public Plaza(DateTime Fecha, double Iva, double Flete) : base(Fecha)
         {
-            this.iva = iva;
-            this.flete = flete;
+            this.Iva = Iva;
+            this.Flete = Flete;
         }
         
 
