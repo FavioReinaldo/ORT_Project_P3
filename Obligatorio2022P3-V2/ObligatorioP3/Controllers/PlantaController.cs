@@ -16,6 +16,8 @@ namespace ObligatorioP3.Controllers
 {
     public class PlantaController : Controller
     {
+        RepositorioPlanta repositorio = new RepositorioPlanta(new Connection());
+        RepositorioTipo repositorio1 = new RepositorioTipo(new Connection());
 
         private IWebHostEnvironment _environment;
         public PlantaController(IWebHostEnvironment environment)
@@ -29,7 +31,7 @@ namespace ObligatorioP3.Controllers
         }
         public IActionResult Alta()
         {
-            
+            ViewBag.Tipos = repositorio1.Get();
             return View();
         }
         [HttpPost]
@@ -90,7 +92,7 @@ namespace ObligatorioP3.Controllers
             return View();
         }
 
-        IRepositorio<Planta> repositorio = new RepositorioPlanta(new Connection());
+        
         public IActionResult ListarPlanta()
         {
 

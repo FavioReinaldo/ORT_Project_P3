@@ -291,7 +291,7 @@ namespace Dominio
         public List<Tipo> ListaTipos()
         {
             List<Tipo> aux = new List<Tipo>();
-            foreach (Tipo unT in tipos)
+            foreach (Tipo unT in Tipos)
             {
                 aux.Add(unT);
             }
