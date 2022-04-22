@@ -24,10 +24,12 @@ namespace ObligatorioP3.Controllers
         }
         public IActionResult Index()
         {
+            
             return View();
         }
         public IActionResult Alta()
         {
+            
             return View();
         }
         [HttpPost]
@@ -78,7 +80,7 @@ namespace ObligatorioP3.Controllers
                 unaPlanta.FotoPlanta = nombreImagen;
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }

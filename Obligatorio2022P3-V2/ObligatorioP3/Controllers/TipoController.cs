@@ -22,8 +22,6 @@ namespace ObligatorioP3.Controllers
         public ActionResult Alta()
         {
 
-
-            
             return View(new Tipo());
         }
         [HttpPost]
