@@ -38,7 +38,7 @@ namespace DataAccess
                     planta = unaPlanta;
                     planta.NombreTipo= (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
-                    planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
+                    planta.NombresVulgares = (List<string>)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
@@ -103,7 +103,7 @@ namespace DataAccess
                     planta = unaPlanta;
                     planta.NombreTipo = (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
-                    planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
+                    planta.NombresVulgares = (List<string>)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
@@ -148,7 +148,7 @@ namespace DataAccess
                     planta = unaPlanta;
                     planta.NombreTipo = (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
-                    planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
+                    planta.NombresVulgares = (List<string>)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
@@ -193,7 +193,7 @@ namespace DataAccess
                     planta = unaPlanta;
                     planta.NombreTipo = (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
-                    planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
+                    planta.NombresVulgares = (List<string>)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];

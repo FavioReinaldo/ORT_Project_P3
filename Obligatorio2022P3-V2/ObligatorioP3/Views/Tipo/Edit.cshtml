@@ -1,17 +1,18 @@
-﻿@model Dominio.Tipo;
+﻿@model Dominio.Tipo
 
 
 @{
-    ViewData["Title"] = "Alta";
+    ViewData["Title"] = "Edit";
 }
 
+<h1>Modificar Tipo</h1>
 
-<h1>Crear un nuevo tipo de planta</h1>
-
+<hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Alta" >
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Nombre" />
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
                 <input asp-for="Nombre" class="form-control" />
@@ -22,17 +23,16 @@
                 <input asp-for="Descripcion" class="form-control" />
                 <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
-
+            
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Guardar</button>
-
+                <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Lista de tipos </a>
+    <a asp-action="Index">Volver al Listado</a>
 </div>
 
 @section Scripts {

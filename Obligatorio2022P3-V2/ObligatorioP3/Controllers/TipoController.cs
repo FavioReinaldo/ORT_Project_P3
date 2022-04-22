@@ -68,5 +68,36 @@ namespace ObligatorioP3.Controllers
             }
         }
 
+        public ActionResult Edit(string nombre)
+        {
+            Tipo unTipo = repositorio.GetByName(nombre);
+            return View(unTipo);
+        }
+
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Tipo unTipo)
+        {
+            //Validar datos del cliente
+            if (unTipo.IsValid())
+            {
+                try
+                {
+                    repositorio.Update(unTipo);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    return View("Error", new ErrorViewModel());
+                }
+            }
+            else
+            {
+                return View(new Models.ErrorViewModel());
+            }
+        }
+
+
     }
 }

@@ -12,7 +12,7 @@ namespace Dominio
         public string NombreCientifico { get; set; }
         public List<string> NombresVulgares { get; set; }
         public string Descripcion { get; set; }
-        public List<String> Ambiente { get; }
+        public List<string> Ambiente { get; set; }
         public double AlturaMaxima { get; set; }
         public string FotoPlanta { get; set; }
         public FichaCuidados FichaCuidados { get; set; }

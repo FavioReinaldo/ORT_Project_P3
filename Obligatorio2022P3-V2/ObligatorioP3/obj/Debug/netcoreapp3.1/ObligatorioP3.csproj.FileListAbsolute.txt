@@ -881,3 +881,4 @@ C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Ob
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.Views.pdb
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.csproj.CopyComplete
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\ObligatorioP3.genruntimeconfig.cache
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\Razor\Views\Tipo\Edit.cshtml.g.cs

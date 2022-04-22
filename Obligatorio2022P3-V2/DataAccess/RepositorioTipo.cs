@@ -161,7 +161,28 @@ namespace DataAccess
 
         public void Update(Tipo obj)
         {
-            throw new NotImplementedException();
+            IDbCommand command = _con.CreateCommand();
+            command.CommandText = @"UPDATE Tipo SET Nombre = @Nombre, Descripcion = @Descripcion";
+            command.Parameters.Add(new SqlParameter("@Id", obj.Nombre));
+            command.Parameters.Add(new SqlParameter("@Name", obj.Descripcion));
+           
+            try
+            {
+                _con.Open();
+                int filasAfectadas = command.ExecuteNonQuery();
+                if (filasAfectadas == 0)
+                    throw new Exception();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                _con.Close();
+                _con.Dispose();
+                command.Dispose();
+            }
         }
     }
 }
