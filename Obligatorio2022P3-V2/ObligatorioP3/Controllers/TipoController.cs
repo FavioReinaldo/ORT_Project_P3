@@ -79,7 +79,6 @@ namespace ObligatorioP3.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Tipo unTipo)
         {
-            //Validar datos del cliente
             if (unTipo.IsValid())
             {
                 try

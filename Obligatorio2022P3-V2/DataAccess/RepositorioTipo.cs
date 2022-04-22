@@ -162,9 +162,9 @@ namespace DataAccess
         public void Update(Tipo obj)
         {
             IDbCommand command = _con.CreateCommand();
-            command.CommandText = @"UPDATE Tipo SET Nombre = @Nombre, Descripcion = @Descripcion";
-            command.Parameters.Add(new SqlParameter("@Id", obj.Nombre));
-            command.Parameters.Add(new SqlParameter("@Name", obj.Descripcion));
+            command.CommandText = @"UPDATE Tipo SET Descripcion = @Descripcion WHERE  Nombre = @Nombre";
+            command.Parameters.Add(new SqlParameter("@Nombre", obj.Nombre));
+            command.Parameters.Add(new SqlParameter("@Descripcion", obj.Descripcion));
            
             try
             {
