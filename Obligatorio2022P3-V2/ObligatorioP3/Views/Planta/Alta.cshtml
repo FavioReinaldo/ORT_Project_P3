@@ -1,7 +1,5 @@
 ﻿@model Dominio.Planta;
 
-
-
 @{
     ViewData["Title"] = "Alta";
 }
@@ -18,6 +16,9 @@
             <div class="form-group">
                 <label asp-for="NombreTipo" class="control-label"></label>
                 
+            </div>
+            <div class="form-group">
+                <label asp-for="NombreCientifico" class="control-label"></label>
                 <input asp-for="NombreCientifico" class="form-control" />
                 <span asp-validation-for="NombreCientifico" class="text-danger"></span>
             </div>
