@@ -36,13 +36,13 @@ namespace DataAccess
                 {
                     Planta unaPlanta = new Planta();
                     planta = unaPlanta;
-                    planta.MiTipo = (Tipo)reader["Tipo"];
+                    planta.NombreTipo= (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
                     planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
-                    planta.FotoUrl = (string)reader["FotoUrl"];
+                    planta.FotoPlanta = (string)reader["FotoPlanta"];
                     planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
                 }
@@ -101,13 +101,13 @@ namespace DataAccess
                 {
                     Planta unaPlanta  = new Planta();
                     planta = unaPlanta;
-                    planta.MiTipo = (Tipo)reader["Tipo"];
+                    planta.NombreTipo = (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
                     planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
-                    planta.FotoUrl = (string)reader["FotoUrl"];
+                    planta.FotoPlanta = (string)reader["FotoPlanta"];
                     planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
                 }
@@ -146,13 +146,13 @@ namespace DataAccess
                 {
                     Planta unaPlanta  = new Planta();
                     planta = unaPlanta;
-                    planta.MiTipo = (Tipo)reader["Tipo"];
+                    planta.NombreTipo = (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
                     planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
-                    planta.FotoUrl = (string)reader["FotoUrl"];
+                    planta.FotoPlanta = (string)reader["FotoPlanta"];
                     planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
                 }
@@ -191,13 +191,13 @@ namespace DataAccess
                 {
                     Planta unaPlanta = new Planta();
                     planta = unaPlanta;
-                    planta.MiTipo = (Tipo)reader["Tipo"];
+                    planta.NombreTipo = (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
                     planta.NombresVulgares = (List<string>)reader["MisNombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
-                    planta.FotoUrl = (string)reader["FotoUrl"];
+                    planta.FotoPlanta = (string)reader["FotoPlanta"];
                     planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
                 }
