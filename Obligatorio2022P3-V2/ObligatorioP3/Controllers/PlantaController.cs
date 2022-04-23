@@ -26,41 +26,63 @@ namespace ObligatorioP3.Controllers
         }
         public IActionResult Index()
         {
-            
-            return View();
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
         }
+
         public IActionResult Alta()
         {
-            ViewBag.Tipos = repositorio1.Get();
-            return View();
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                ViewBag.Tipos = repositorio1.Get();
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Alta(Planta unaPlanta, IFormFile imagen)
-        {
-            if (unaPlanta.IsValid())
+        {                     
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-                try
+                if (unaPlanta.IsValid())
                 {
-                    GuardarImagen(imagen, unaPlanta);
-                    repositorio.Insert(unaPlanta);
-                    return RedirectToAction(nameof(Index));
+                    try
+                    {
+                        GuardarImagen(imagen, unaPlanta);
+                        repositorio.Insert(unaPlanta);
+                        return RedirectToAction(nameof(Index));
+                    }
+                    catch
+                    {
+                        return View("Error", new ErrorViewModel());
+                    }
                 }
-                catch
+                else
                 {
-                    return View("Error", new ErrorViewModel());
+                    return View(new Models.ErrorViewModel());
                 }
             }
             else
             {
-                return View(new Models.ErrorViewModel());
+                return RedirectToAction("Login", "Home");
             }
-
 
         }
 
         private bool GuardarImagen(IFormFile imagen, Planta unaPlanta)
         {
+
             if (imagen == null || unaPlanta == null)
                 return false;
             
@@ -89,47 +111,89 @@ namespace ObligatorioP3.Controllers
         }
         public IActionResult VisualisarImagen()
         {
-            return View();
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
         }
 
         
         public IActionResult ListarPlanta()
         {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
 
-            return View(repositorio.Get());
+                return View(repositorio.Get());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }            
         }
 
         public IActionResult ListarPlantaMasBajaQueXCentimetros(double miAlturaMaxima)
         {
-            if(miAlturaMaxima > 0)
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-            return View(repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));             
 
+                if (miAlturaMaxima > 0)
+                {
+                    return View(repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));
+
+                }
+                ViewBag.Mensaje = "Los datos ingresados no son correctos";
+                return View("ListarPlanta");
             }
-            ViewBag.Mensaje = "Los datos ingresados no son correctos";
-            return View("ListarPlanta");
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            
         }
 
         public IActionResult ListarPlantaDeXCentimetrosOMas(double miAlturaMinima)
         {
-            if (miAlturaMinima > 0)
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-                return View(repositorio.GetDeXCentimetrosOMas(miAlturaMinima));
 
+                if (miAlturaMinima > 0)
+                {
+                    return View(repositorio.GetDeXCentimetrosOMas(miAlturaMinima));
+
+                }
+                ViewBag.Mensaje = "Los datos ingresados no son correctos";
+                return View("ListarPlanta");
             }
-            ViewBag.Mensaje = "Los datos ingresados no son correctos";
-            return View("ListarPlanta");
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+           
         }
 
         public IActionResult ListarPlantaPorAmbiente(string miAmbiente)
         {
-            if (miAmbiente != null && miAmbiente != "")
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-                return View(repositorio.GetPorAmbiente(miAmbiente));
 
+                if (miAmbiente != null && miAmbiente != "")
+                {
+                    return View(repositorio.GetPorAmbiente(miAmbiente));
+
+                }
+                ViewBag.Mensaje = "Los datos ingresados no son correctos";
+                return View("ListarPlanta");
             }
-            ViewBag.Mensaje = "Los datos ingresados no son correctos";
-            return View("ListarPlanta");
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+            
         }
 
 

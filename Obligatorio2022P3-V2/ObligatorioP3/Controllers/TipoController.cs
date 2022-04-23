@@ -17,78 +17,119 @@ namespace ObligatorioP3.Controllers
         
         public ActionResult Index()
         {
-           return View(repositorio.Get());
-
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View(repositorio.Get());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }           
         }
         public ActionResult Alta()
         {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
 
-            return View(new Tipo());
+                return View(new Tipo());
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }            
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Alta(Tipo unTipo)
         {
-            if (unTipo.IsValid() && (unTipo.Nombre != null || unTipo.Nombre != ""))
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-                List<char> Validos = new List<char>() {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-                bool alfabetico = false;
-                foreach (char a in unTipo.Nombre)
+
+                if (unTipo.IsValid() && (unTipo.Nombre != null || unTipo.Nombre != ""))
                 {
-                    if (Validos.Contains(a))
+                    List<char> Validos = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+                    bool alfabetico = false;
+                    foreach (char a in unTipo.Nombre)
                     {
-                        alfabetico = true;
+                        if (Validos.Contains(a))
+                        {
+                            alfabetico = true;
+                        }
                     }
-                }
 
-                if (alfabetico)
-                {
+                    if (alfabetico)
+                    {
 
-                try
+                        try
+                        {
+                            repositorio.Insert(unTipo);
+                            return RedirectToAction(nameof(Index));
+                        }
+                        catch
+                        {
+                            return View("Error", new ErrorViewModel());
+                        }
+                    }
+                    return RedirectToAction(nameof(Index), new { mensaje = "No se pudo dar de alta el tipo" });
+
+                }
+                else
                 {
-                    repositorio.Insert(unTipo);
-                    return RedirectToAction(nameof(Index));
+                    return View(new Models.ErrorViewModel());
                 }
-                catch
-                {
-                    return View("Error", new ErrorViewModel());
-                }
-                }
-                return RedirectToAction(nameof(Index), new { mensaje = "No se pudo dar de alta el tipo" });
 
             }
             else
             {
-                return View(new Models.ErrorViewModel());
-            }
-
-            
+                return RedirectToAction("Login", "Home");
+            }                      
         }
         public ActionResult Delete(string nombre)
         {
-            Tipo unTipo = repositorio.GetByName(nombre);
-            return View(unTipo);
-            
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                Tipo unTipo = repositorio.GetByName(nombre);
+                return View(unTipo);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }                        
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(Tipo unTipo, IFormCollection collection)
         {
-            try
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-                repositorio.Delete(unTipo.Nombre);
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    repositorio.Delete(unTipo.Nombre);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    return View("Error", new Models.ErrorViewModel());
+                }
             }
-            catch
+            else
             {
-                return View("Error", new Models.ErrorViewModel());
+                return RedirectToAction("Login", "Home");
             }
+            
         }
 
         public ActionResult Edit(string nombre)
         {
-            Tipo unTipo = repositorio.GetByName(nombre);
-            return View(unTipo);
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                Tipo unTipo = repositorio.GetByName(nombre);
+                return View(unTipo);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }            
         }
 
         
@@ -96,28 +137,43 @@ namespace ObligatorioP3.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Tipo unTipo)
         {
-            if (unTipo.IsValid())
+            if (HttpContext.Session.GetString("Mail") != null)
             {
-                try
+
+                if (unTipo.IsValid())
                 {
-                    repositorio.Update(unTipo);
-                    return RedirectToAction(nameof(Index));
+                    try
+                    {
+                        repositorio.Update(unTipo);
+                        return RedirectToAction(nameof(Index));
+                    }
+                    catch
+                    {
+                        return View("Error", new ErrorViewModel());
+                    }
                 }
-                catch
+                else
                 {
-                    return View("Error", new ErrorViewModel());
+                    return View(new Models.ErrorViewModel());
                 }
             }
             else
             {
-                return View(new Models.ErrorViewModel());
-            }
+                return RedirectToAction("Login", "Home");
+            }            
         }
 
         public ActionResult BuscarTipo(string nomTipo)
         {
-            ViewBag.Tipo = repositorio.GetByName(nomTipo);
-            return View();
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                ViewBag.Tipo = repositorio.GetByName(nomTipo);
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }            
         }
 
 
