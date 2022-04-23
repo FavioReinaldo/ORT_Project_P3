@@ -29,8 +29,21 @@ namespace ObligatorioP3.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Alta(Tipo unTipo)
         {
-            if (unTipo.IsValid())
+            if (unTipo.IsValid() && (unTipo.Nombre != null || unTipo.Nombre != ""))
             {
+                List<char> Validos = new List<char>() {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+                bool alfabetico = false;
+                foreach (char a in unTipo.Nombre)
+                {
+                    if (Validos.Contains(a))
+                    {
+                        alfabetico = true;
+                    }
+                }
+
+                if (alfabetico)
+                {
+
                 try
                 {
                     repositorio.Insert(unTipo);
@@ -40,6 +53,9 @@ namespace ObligatorioP3.Controllers
                 {
                     return View("Error", new ErrorViewModel());
                 }
+                }
+                return RedirectToAction(nameof(Index), new { mensaje = "No se pudo dar de alta el tipo" });
+
             }
             else
             {
