@@ -37,31 +37,37 @@ namespace ObligatorioP3.Controllers
 
         public IActionResult Login()
         {
-            return View(); 
+            return View();
         }
 
 
-        IRepositorio<Usuario> repositorio = new RepositorioUsuario(new Connection());
+        RepositorioUsuario repositorio = new RepositorioUsuario(new Connection());
 
 
         public IActionResult VerificacionLogin(string mail, string password)
         {
-            if (mail != null && password != null && mail != "" && password != "" && Sistema.Instancia.ValidarLogIn(mail, password))
+            if (mail != null && password != null && mail != "" && password != "")
             {
-                //repositorio.GetUsuario(mail, password);       //No se como guardar y validar de aca el mail y el password en variables para trabajar con ellos
-                HttpContext.Session.SetString("Mail", mail);   
-                return RedirectToAction("Index", "Home");
+                if (repositorio.ValidarUsuario(mail, password))
+                {
+                    HttpContext.Session.SetString("Mail", mail);
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ViewBag.Mensaje = "Los datos ingresados no son correctos, verifique Mail y/o Password";
+                }
             }
             else
             {
-                ViewBag.Mensaje = "Los datos ingresados no son correctos";
+                ViewBag.Mensaje = "Debe ingresar Mail y Password";
             }
             return View("Login");
         }
 
         public IActionResult CerrarSesion()
         {
-            HttpContext.Session.Remove("Mail");            
+            HttpContext.Session.Remove("Mail");
             return View("Login");
         }
     }

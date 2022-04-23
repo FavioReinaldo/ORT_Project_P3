@@ -25,7 +25,7 @@ namespace DataAccess
             throw new NotImplementedException();
         }
 
-        public IEnumerable GetUsuario(string mail, string password)
+        /*public IEnumerable GetUsuario(string mail, string password)
         {
             ICollection<Usuario> result = new List<Usuario>();
             IDbCommand command = _conn.CreateCommand();
@@ -61,8 +61,45 @@ namespace DataAccess
 
             }
             return result;
-        }
+        }*/
+        public bool ValidarUsuario(string mail, string password)
+        {
+            bool resultado = false;
+            Usuario miUsuario = new Usuario();
+            IDbCommand command = _conn.CreateCommand();
+            command.CommandText = $"Select * From dbo.Usuario where mail = '{mail}' AND password = '{password}'";
 
+            try
+            {
+                _conn.Open();
+                using IDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    miUsuario.Mail = (string)reader["mail"];
+                    miUsuario.Password = (string)reader["password"];
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                if (_conn != null)
+                {
+                    _conn.Close();
+                    _conn.Dispose();
+                }
+
+            }
+            if (miUsuario.Mail != null && miUsuario.Password != null)
+            {
+                resultado = true;
+            }
+            return resultado;
+        }
         public Usuario GetById(int id)
         {
             throw new NotImplementedException();

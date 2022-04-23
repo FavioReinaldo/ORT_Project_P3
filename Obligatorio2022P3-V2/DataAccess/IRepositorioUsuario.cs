@@ -7,8 +7,8 @@ using Dominio;
 
 namespace DataAccess
 {
-    interface IRepositorioUsuario:IRepositorio<Usuario>
+    interface IRepositorioUsuario : IRepositorio<Usuario>
     {
-        IEnumerable GetUsuario(string mail, string usuario);
+        bool ValidarUsuario(string mail, string password);
     }
 }
