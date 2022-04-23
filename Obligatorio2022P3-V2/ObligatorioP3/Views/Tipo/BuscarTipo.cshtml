@@ -1,0 +1,45 @@
+﻿@using Dominio;
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Tipos</h1>
+
+<p>
+    <a asp-action="Alta">Crear un nuevo tipo</a>
+</p>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewBag.Tipo)
+        {
+
+            <tr>
+                <td>
+                    @item.Nombre
+                </td>
+                <td>
+                    @item.Descripcion
+                </td>
+
+                <td>
+
+                    <a asp-action="Delete" asp-route-nombre="@item.Nombre"> Eliminar </a>
+                    <a asp-action="Edit" asp-route-nombre="@item.Nombre"> Modificar </a>
+
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

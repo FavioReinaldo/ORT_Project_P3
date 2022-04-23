@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Dominio.Tipo>
+@using Microsoft.AspNetCore.Http;
 
 @{
     ViewData["Title"] = "Index";
@@ -10,6 +11,15 @@
     <a asp-action="Alta">Crear un nuevo tipo</a>
 </p>
 
+<div>
+
+    <label for="Busqueda">Buscar Tipo</label>
+    <input id="Busqueda" type="text" />
+    <button id="button" type="button">Buscar</button>
+</div>
+
+
+
 <table class="table">
     <thead>
         <tr>
@@ -19,7 +29,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
-            
+
             <th>
             </th>
         </tr>
@@ -35,7 +45,7 @@
                 <td>
                     @Html.DisplayFor(modelitem => item.Descripcion)
                 </td>
-           
+
                 <td>
 
                     <a asp-action="Delete" asp-route-nombre="@item.Nombre"> Eliminar </a>
@@ -47,3 +57,23 @@
 
     </tbody>
 </table>
+
+@section Scripts
+{
+    <script>
+        const button = document.getElementById("button");
+
+        button.addEventListener("click", () => {
+            const Busqueda = document.getElementById("Busqueda").value
+            window.location.href = `/Tipo/BuscarTipo?nomTipo=${Busqueda}`
+
+        })
+
+
+
+
+
+
+    </script>
+
+}

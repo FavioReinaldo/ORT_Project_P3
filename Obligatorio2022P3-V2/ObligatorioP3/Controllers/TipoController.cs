@@ -17,7 +17,8 @@ namespace ObligatorioP3.Controllers
         
         public ActionResult Index()
         {
-            return View(repositorio.Get());
+           return View(repositorio.Get());
+
         }
         public ActionResult Alta()
         {
@@ -96,6 +97,13 @@ namespace ObligatorioP3.Controllers
                 return View(new Models.ErrorViewModel());
             }
         }
+
+        public ActionResult BuscarTipo(string nomTipo)
+        {
+            ViewBag.Tipo = repositorio.GetByName(nomTipo);
+            return View();
+        }
+
 
 
     }
