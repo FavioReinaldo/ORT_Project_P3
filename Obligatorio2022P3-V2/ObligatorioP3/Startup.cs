@@ -42,7 +42,7 @@ namespace ObligatorioP3
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
-            
+            app.UseSession();  //AGREGADO para el manejo de variables de sesion
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -50,7 +50,7 @@ namespace ObligatorioP3
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Login}/{id?}");
-                
+
             });
         }
     }
