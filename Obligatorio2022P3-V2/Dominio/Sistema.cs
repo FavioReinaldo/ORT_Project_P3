@@ -139,14 +139,14 @@ namespace Dominio
             {
                 foreach (Planta miPlanta in plantas)
                 {
-                    for (int i = 0; i < miPlanta.Ambiente.Count; i++)
+                    /*for (int i = 0; i < miPlanta.Ambiente.Count; i++)
                     {
 
                         if (miPlanta.Ambiente[i] == miAmbiente)
                         {
                             existe = true;
                         }
-                    }
+                    }*/
                     if (existe)
                     {
                         misPlantasBuscadas.Add(miPlanta);
