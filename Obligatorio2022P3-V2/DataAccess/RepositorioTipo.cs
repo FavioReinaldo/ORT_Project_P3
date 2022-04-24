@@ -47,7 +47,7 @@ namespace DataAccess
         {
             ICollection<Tipo> result = new List<Tipo>();
 
-            IDbCommand command = _con.CreateCommand();
+             IDbCommand command = _con.CreateCommand();
             command.CommandText = "Select * FROM dbo.Tipo";
             try
             {

@@ -10,25 +10,27 @@ namespace Dominio
         #region Atributos
         public string  NombreTipo { get; set; }
         public string NombreCientifico { get; set; }
-        public List<string> NombresVulgares { get; set; }
+        public string NombresVulgares { get; set; }
         public string Descripcion { get; set; }
-        public List<string> Ambiente { get; set; }
-        public double AlturaMaxima { get; set; }
+        public string Ambiente { get; set; }
+        public double  AlturaMaxima { get; set; }
         public string FotoPlanta { get; set; }
         public FichaCuidados FichaCuidados { get; set; }
         #endregion
 
 
-        
-        public Planta(string NombreTipo, string NombreCientifico, string Descripcion, string Unambiente, double AlturaMaxima, string FotoPlanta) 
+
+        public Planta(string NombreTipo, string NombreVulgar, string NombreCientifico, string Descripcion, string Unambiente, double AlturaMaxima, string FotoPlanta)
         {
             this.NombreTipo = NombreTipo;
+            this.NombresVulgares = NombreVulgar;
             this.NombreCientifico = NombreCientifico;
             this.Descripcion = Descripcion;
-            this.Ambiente.Add(Unambiente);
+            this.Ambiente = Unambiente;
             this.AlturaMaxima = AlturaMaxima;
             this.FotoPlanta = FotoPlanta;
         }
+        
         public Planta()
         {
             //Constructor por defecto

@@ -24,7 +24,7 @@ namespace DataAccess
         {
             ICollection<Planta> result = new List<Planta>();
             IDbCommand command = _conn.CreateCommand();
-            command.CommandText = "Select * From dbo.Planta";
+            command.CommandText = "Select * From Planta";
 
             try
             {
@@ -38,12 +38,12 @@ namespace DataAccess
                     planta = unaPlanta;
                     planta.NombreTipo= (string)reader["NombreTipo"];
                     planta.NombreCientifico = (string)reader["NombreCientifico"];
-                    planta.NombresVulgares = (List<string>)reader["NombresVulgares"];
+                    planta.NombresVulgares = (string)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
-                    planta.Ambiente[0] = (string)reader["Ambiente"];/*********************************************************************************************/
+                    planta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
                     planta.AlturaMaxima = (double)reader["AlturaMaxima"];
                     planta.FotoPlanta = (string)reader["FotoPlanta"];
-                    planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
+                    //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
                 }
             }

@@ -127,7 +127,6 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-
                 return View(repositorio.Get());
             }
             else
