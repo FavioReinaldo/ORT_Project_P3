@@ -41,7 +41,7 @@ namespace ObligatorioP3.Controllers
             if (HttpContext.Session.GetString("Mail") != null)
             {
                 ViewBag.Tipos = repositorio1.Get();
-                return View();
+                return View(new Planta());
             }
             else
             {
@@ -59,8 +59,9 @@ namespace ObligatorioP3.Controllers
                 {
                     try
                     {
-                        GuardarImagen(imagen, unaPlanta);
+                        
                         repositorio.Insert(unaPlanta);
+                        GuardarImagen(imagen, unaPlanta);
                         return RedirectToAction(nameof(Index));
                     }
                     catch

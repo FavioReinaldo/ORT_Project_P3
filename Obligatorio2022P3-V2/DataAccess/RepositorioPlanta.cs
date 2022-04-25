@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace DataAccess
@@ -72,7 +73,35 @@ namespace DataAccess
 
         public void Insert(Planta obj)
         {
-            throw new NotImplementedException();
+            IDbCommand command = _conn.CreateCommand();
+            command.CommandText = @"INSERT INTO Tipo(NombreTipo, NombreVulgar, NombreCientifico, Descripcion, Ambiente, AlturaMaxima) VALUES(@NombreTipo, @NombreVulgar, @NombreCientifico, @Descripcion, @Ambiente, @AlturaMaxima)";
+            command.Parameters.Add(new SqlParameter("@NombreTipo", obj.NombreTipo));
+            command.Parameters.Add(new SqlParameter("@NombreVulgar", obj.NombresVulgares));
+            command.Parameters.Add(new SqlParameter("@NombreCientifico", obj.NombreCientifico));
+            command.Parameters.Add(new SqlParameter("@Descripcion", obj.Descripcion));
+            command.Parameters.Add(new SqlParameter("@Ambiente", obj.Ambiente));
+            command.Parameters.Add(new SqlParameter("@AlturaMaxima", obj.AlturaMaxima));
+            
+            
+
+
+            try
+            {
+                _conn.Open();
+                int filasAfectadas = command.ExecuteNonQuery();
+                if (filasAfectadas == 0)
+                    throw new Exception();
+            }
+            catch (Exception e)
+            {
+                throw;
+            }
+            finally
+            {
+                _conn.Close();
+                _conn.Dispose();
+                command.Dispose();
+            }
         }
 
         public void Save()
