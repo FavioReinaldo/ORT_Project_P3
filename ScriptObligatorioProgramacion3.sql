@@ -46,7 +46,7 @@ CREATE TABLE Planta (
 	NombresVulgares VARCHAR(200),
 	Descripcion VARCHAR(200),
 	Ambiente VARCHAR(200),
-	AlturaMaxima FLOAT,
+	AlturaMaxima int,
 	FotoPlanta VARCHAR(200)		
 );
 GO
@@ -67,7 +67,7 @@ CREATE TABLE FichaCuidados (
 	NombreCientifico VARCHAR(200) NOT NULL,
 	FrecuenciaRiego VARCHAR(200),
 	Illuminacion VARCHAR(200),
-	Temperatura FLOAT 	
+	Temperatura int 	
 );
 GO
 
@@ -136,7 +136,9 @@ INSERT INTO FichaCuidados(NombreCientifico, FrecuenciaRiego, Illuminacion, Tempe
 		('Eucalyptus',  '1 dia', 'indirecta', 20),
 		('Mentha',  '5 dias', 'indirecta', 18),
 		('Succulentus',  '1 dia', 'indirecta', 17);	
-		
+
+
+
 		
 select * from Usuario
 
