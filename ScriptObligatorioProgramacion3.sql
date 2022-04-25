@@ -30,7 +30,7 @@ GO
 
 --Tabla Tipo
 Create table dbo.Tipo(
-			Nombre varchar(50) not null,
+			Nombre varchar(50) not null unique,
 			Descripcion varchar(200));
 GO
 
@@ -46,7 +46,7 @@ CREATE TABLE Planta (
 	NombresVulgares VARCHAR(200),
 	Descripcion VARCHAR(200),
 	Ambiente VARCHAR(200),
-	AlturaMaxima FLOAT,
+	AlturaMaxima INT,
 	FotoPlanta VARCHAR(200)		
 );
 GO
@@ -67,7 +67,7 @@ CREATE TABLE FichaCuidados (
 	NombreCientifico VARCHAR(200) NOT NULL,
 	FrecuenciaRiego VARCHAR(200),
 	Illuminacion VARCHAR(200),
-	Temperatura FLOAT 	
+	Temperatura INT 	
 );
 GO
 

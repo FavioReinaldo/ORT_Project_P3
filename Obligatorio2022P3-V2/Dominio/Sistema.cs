@@ -69,6 +69,7 @@ namespace Dominio
         }
         #endregion
 
+        /*
         #region Metodo ValidarTipo
         //*************** METODO VALIDAR TIPO ***************
         public bool ValidarTipo(List<Tipo> miTipo, string Nombre)
@@ -92,6 +93,7 @@ namespace Dominio
             return resultado;
         }
         #endregion
+        */
 
 
         #region Metodo ValidarAlfabeticoTipo

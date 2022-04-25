@@ -44,19 +44,23 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                List<Tipo> todosLosTipos = (List<Tipo>)repositorio.Get();
-
-                if (unTipo.IsValid() && unS.ValidarTipo(todosLosTipos, unTipo.Nombre))
+                
+                if (unTipo.IsValid())
                 {
-                    if (unS.ValidarAlfabeticoTipo(unTipo)){
+                    if (unS.ValidarAlfabeticoTipo(unTipo))
+                    {
                         try
                         {
                             repositorio.Insert(unTipo);
                             return RedirectToAction(nameof(Index));
                         }
-                        catch
+                        catch (Exception e)
                         {
-                            return View("Error", new ErrorViewModel());
+                            var ex = e.Message;
+                            if (ex.Contains("duplicate key"))
+                            {
+                                return RedirectToAction(nameof(Index), new { mensaje = "Error__El_campo_debe_ser_unico"});
+                            }
                         }
                     }
 
