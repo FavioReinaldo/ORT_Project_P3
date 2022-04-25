@@ -136,7 +136,20 @@ namespace ObligatorioP3.Controllers
             }            
         }
 
-        public IActionResult ListarPlantaMasBajaQueXCentimetros(double miAlturaMaxima)
+        public IActionResult ListarPlantaMasBajaQueXCentimetrosIndex()
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
+        }
+        public IActionResult ListarPlantaMasBajaQueXCentimetros(int miAlturaMaxima)
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
@@ -153,10 +166,23 @@ namespace ObligatorioP3.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+
         }
 
-        public IActionResult ListarPlantaDeXCentimetrosOMas(double miAlturaMinima)
+
+        public IActionResult ListarPlantaDeXCentimetrosOMasIndex()
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
+        }
+        public IActionResult ListarPlantaDeXCentimetrosOMas(int miAlturaMinima)
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
@@ -173,7 +199,20 @@ namespace ObligatorioP3.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-           
+
+        }
+
+        public IActionResult ListarPlantaPorAmbienteIndex()
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+
         }
 
         public IActionResult ListarPlantaPorAmbiente(string miAmbiente)
@@ -193,8 +232,65 @@ namespace ObligatorioP3.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+
         }
+
+        public IActionResult ListarPlantaPorTipoIndex()
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                ViewBag.Tipos = repositorio1.Get();
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
+
+        public IActionResult ListarPlantaPorTipo(string NombreTipo)
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+
+                if (NombreTipo != null && NombreTipo != "")
+                {
+                    return View(repositorio.GetPorTipo(NombreTipo));
+
+                }
+                ViewBag.Mensaje = "Los datos ingresados no son correctos";
+                return View("ListarPlanta");
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
+
+        public IActionResult ListarPlantaPorTextoIndex()
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
+
+        public IActionResult ListarPlantaPorTexto(string miTexto)
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View(repositorio.GetPorTexto(miTexto));
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
+
 
 
     }

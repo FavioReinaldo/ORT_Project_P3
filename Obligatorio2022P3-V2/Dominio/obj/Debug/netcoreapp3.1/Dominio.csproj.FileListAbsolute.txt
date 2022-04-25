@@ -874,10 +874,10 @@ D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
+D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.AssemblyReference.cache
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.GeneratedMSBuildEditorConfig.editorconfig
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
-D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.AssemblyReference.cache

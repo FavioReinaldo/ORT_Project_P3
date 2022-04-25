@@ -115,11 +115,11 @@ namespace DataAccess
             throw new NotImplementedException();
         }
 
-        public IEnumerable GetMasBajasQueXCentimetros(double miAlturaMaxima)
+        public IEnumerable GetMasBajasQueXCentimetros(int miAlturaMaxima)
         {
             ICollection<Planta> result = new List<Planta>();
             IDbCommand command = _conn.CreateCommand();
-            command.CommandText = $"Select * From dbo.Planta Where Altura < {miAlturaMaxima}";
+            command.CommandText = $"Select * From Planta Where AlturaMaxima < {miAlturaMaxima}";
 
             try
             {
@@ -160,11 +160,11 @@ namespace DataAccess
             return result; ;
         }
 
-        public IEnumerable GetDeXCentimetrosOMas(double miAlturaMinima)
+        public IEnumerable GetDeXCentimetrosOMas(int miAlturaMinima)
         {
             ICollection<Planta> result = new List<Planta>();
             IDbCommand command = _conn.CreateCommand();
-            command.CommandText = $"Select * From dbo.Planta Where Altura >= {miAlturaMinima}";
+            command.CommandText = $"Select * From Planta Where AlturaMaxima >= {miAlturaMinima}";
 
             try
             {
@@ -205,11 +205,11 @@ namespace DataAccess
             return result; ;
         }
 
-        public IEnumerable GetPorAmbiente(double miAmbiente)
+        public IEnumerable GetPorAmbiente(string miAmbiente)
         {
             ICollection<Planta> result = new List<Planta>();
             IDbCommand command = _conn.CreateCommand();
-            command.CommandText = $"Select * From dbo.Planta Where Ambiente = {miAmbiente}";
+            command.CommandText = $"Select * From Planta Where Ambiente = '{miAmbiente}'";
 
             try
             {
@@ -226,6 +226,96 @@ namespace DataAccess
                     planta.NombresVulgares = (string)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
+                    planta.AlturaMaxima = (int)reader["AlturaMaxima"];
+                    planta.FotoPlanta = (string)reader["FotoPlanta"];
+                    //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
+                    result.Add(planta);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                if (_conn != null)
+                {
+                    _conn.Close();
+                    _conn.Dispose();
+                }
+
+            }
+            return result; ;
+        }
+
+        public IEnumerable GetPorTipo(string miTipo)
+        {
+            ICollection<Planta> result = new List<Planta>();
+            IDbCommand command = _conn.CreateCommand();
+            command.CommandText = $"Select * From Planta Where NombreTipo = '{miTipo}'";
+
+            try
+            {
+                _conn.Open();
+                using IDataReader reader = command.ExecuteReader();
+                Planta planta = null;
+
+                while (reader.Read())
+                {
+                    Planta unaPlanta = new Planta();
+                    planta = unaPlanta;
+                    planta.NombreTipo = (string)reader["NombreTipo"];
+                    planta.NombreCientifico = (string)reader["NombreCientifico"];
+                    planta.NombresVulgares = (string)reader["NombresVulgares"];
+                    planta.Descripcion = (string)reader["Descripcion"];
+                    planta.Ambiente = (string)reader["Ambiente"];
+                    planta.AlturaMaxima = (int)reader["AlturaMaxima"];
+                    planta.FotoPlanta = (string)reader["FotoPlanta"];
+                    //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
+                    result.Add(planta);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                if (_conn != null)
+                {
+                    _conn.Close();
+                    _conn.Dispose();
+                }
+
+            }
+            return result; ;
+        }
+
+        public IEnumerable GetPorTexto(string miTexto)
+        {
+            ICollection<Planta> result = new List<Planta>();
+            IDbCommand command = _conn.CreateCommand();
+            command.CommandText = $"Select * From Planta Where NombreCientifico like '%{miTexto}%' OR NombresVulgares like '%{miTexto}%'";
+
+            try
+            {
+                _conn.Open();
+                using IDataReader reader = command.ExecuteReader();
+                Planta planta = null;
+
+                while (reader.Read())
+                {
+                    Planta unaPlanta = new Planta();
+                    planta = unaPlanta;
+                    planta.NombreTipo = (string)reader["NombreTipo"];
+                    planta.NombreCientifico = (string)reader["NombreCientifico"];
+                    planta.NombresVulgares = (string)reader["NombresVulgares"];
+                    planta.Descripcion = (string)reader["Descripcion"];
+                    planta.Ambiente = (string)reader["Ambiente"];
                     planta.AlturaMaxima = (int)reader["AlturaMaxima"];
                     planta.FotoPlanta = (string)reader["FotoPlanta"];
                     //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
@@ -260,7 +350,7 @@ namespace DataAccess
             throw new NotImplementedException();
         }
 
-        public object GetPorAmbiente(string miAmbiente)
+        object IRepositorio<Planta>.GetPorAmbiente(string miAmbiente)
         {
             throw new NotImplementedException();
         }
@@ -309,5 +399,7 @@ namespace DataAccess
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
