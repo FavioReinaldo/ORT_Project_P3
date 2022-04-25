@@ -71,17 +71,17 @@ namespace Dominio
 
         #region Metodo ValidarTipo
         //*************** METODO VALIDAR TIPO ***************
-        public bool ValidarTipo(Tipo miTipo)
+        public bool ValidarTipo(List<Tipo> miTipo, string Nombre)
         {
             bool resultado = true;
 
             if (miTipo != null)
             {
                 int i = 0;
-                while (i < tipos.Count && resultado == true)
+                while (i < miTipo.Count && resultado == true)
                 {
 
-                    if (tipos[i].Nombre.ToUpper().Equals(miTipo.Nombre.ToUpper()))
+                    if (Nombre.ToUpper().Equals(miTipo[i].Nombre.ToUpper()))
                     {
                         resultado = false;
                     }

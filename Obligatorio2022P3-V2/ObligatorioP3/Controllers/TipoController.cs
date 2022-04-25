@@ -44,8 +44,9 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
+                List<Tipo> todosLosTipos = (List<Tipo>)repositorio.Get();
 
-                if (unTipo.IsValid() && (unTipo.Nombre != null || unTipo.Nombre != ""))
+                if (unTipo.IsValid() && unS.ValidarTipo(todosLosTipos, unTipo.Nombre))
                 {
                     if (unS.ValidarAlfabeticoTipo(unTipo)){
                         try
