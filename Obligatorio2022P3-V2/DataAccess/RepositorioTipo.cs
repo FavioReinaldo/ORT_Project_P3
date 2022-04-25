@@ -131,8 +131,8 @@ namespace DataAccess
         {
             IDbCommand command = _con.CreateCommand();
             command.CommandText = @"INSERT INTO Tipo(Nombre, Descripcion) VALUES(@Nombre, @Descripcion)";
-            command.Parameters.Add(new SqlParameter("@Nombre", obj.Nombre));
-            command.Parameters.Add(new SqlParameter("@Descripcion", obj.Descripcion));
+            command.Parameters.Add(new SqlParameter("@Nombre", obj.Nombre.Trim()));
+            command.Parameters.Add(new SqlParameter("@Descripcion", obj.Descripcion.Trim()));
 
 
             try
