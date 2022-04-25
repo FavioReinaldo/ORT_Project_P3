@@ -111,16 +111,16 @@ insert into dbo.Tipo values
 INSERT INTO Planta (NombreTipo, NombreCientifico, NombresVulgares, Descripcion, Ambiente, AlturaMaxima, FotoPlanta)
 	VALUES 	
 
-		('Arbusto', 'Chamaedorea Elegans', 'Palmera de salon', 'Esta es una descripcion de la planta', 'Interior', 95, 'Chamaedorea_Elegans_001'),
-		('Hierba','Thymus', 'Tomillo', 'Esta es una descripcion de la planta', 'Exterior', 43, 'Thymus_001'),
-		('Arbol', 'Quercus Robur', 'Roble', 'Esta es una descripcion de la planta', 'Exterior' , 1500, 'Quercus_Robur_001'),
-		('Gimnosperma', 'Pinus', 'Pino', 'Esta es una descripcion de la planta', 'Exterior' , 900, 'Pinus_001'),
-		('Perenne', 'Vinca Major','Hierba doncella','Esta es una descripcion de la planta', 'Exterior' , 70, 'Vinca_Major_001'),
-		('Arbol', 'Prunus Cerasus','Cereso','Esta es una descripcion de la planta', 'Exterior' , 850, 'Prunus_Cerasus_001'),
-		('Hierba','Sanseviera','Espada de San Jorge','Esta es una descripcion de la planta', 'Mixta' , 120, 'Sanseviera_001'),
-		('Arbol','Eucalyptus','Eucalipto','Esta es una descripcion de la planta', 'Exterior' , 1200, 'Eucalyptus_001'),
-		('Hierba','Mentha','Menta','Esta es una descripcion de la planta', 'Mixta' , 1200, 'Mentha_001'),
-		('Hierba','Succulentus','Suculenta','Esta es una descripcion de la planta', 'Interior' , 20, 'Succulentus_001');
+		('Arbusto', 'Chamaedorea Elegans', 'Palmera de salon', 'Esta es una descripcion de la planta', 'Interior', 95, 'Chamaedorea_Elegans_001.jpg'),
+		('Hierba','Thymus', 'Tomillo', 'Esta es una descripcion de la planta', 'Exterior', 43, 'Thymus_001.jpg'),
+		('Arbol', 'Quercus Robur', 'Roble', 'Esta es una descripcion de la planta', 'Exterior' , 1500, 'Quercus_Robur_001.jpg'),
+		('Gimnosperma', 'Pinus', 'Pino', 'Esta es una descripcion de la planta', 'Exterior' , 900, 'Pinus_001.jpg'),
+		('Perenne', 'Vinca Major','Hierba doncella','Esta es una descripcion de la planta', 'Exterior' , 70, 'Vinca_Major_001.jpg'),
+		('Arbol', 'Prunus Cerasus','Cereso','Esta es una descripcion de la planta', 'Exterior' , 850, 'Prunus_Cerasus_001.jpg'),
+		('Hierba','Sanseviera','Espada de San Jorge','Esta es una descripcion de la planta', 'Mixta' , 120, 'Sanseviera_001.jpg'),
+		('Arbol','Eucalyptus','Eucalipto','Esta es una descripcion de la planta', 'Exterior' , 1200, 'Eucalyptus_001.jpg'),
+		('Hierba','Mentha','Menta','Esta es una descripcion de la planta', 'Mixta' , 1200, 'Mentha_001.jpg'),
+		('Hierba','Succulentus','Suculenta','Esta es una descripcion de la planta', 'Interior' , 20, 'Succulentus_001.jpg');
 		
 
 INSERT INTO FichaCuidados(NombreCientifico, FrecuenciaRiego, Illuminacion, Temperatura )
