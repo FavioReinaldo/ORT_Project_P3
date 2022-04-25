@@ -267,7 +267,42 @@ namespace DataAccess
 
         public Planta GetByName(string nombre)
         {
-            throw new NotImplementedException();
+            Planta unaPlanta = null;
+            IDbCommand command = _conn.CreateCommand();
+            command.CommandText = @"SELECT * FROM dbo.Planta WHERE NombreCientifico = @NombreCientifico";
+            command.Parameters.Add(new SqlParameter("@NombreCientifico", nombre));
+            try
+            {
+                _conn.Open();
+                using (IDataReader reader = command.ExecuteReader())
+                {
+                    reader.Read();
+                    Planta planta = new Planta();
+                    unaPlanta = planta;
+                    unaPlanta.NombreTipo = (string)reader["NombreTipo"];
+                    unaPlanta.NombreCientifico = (string)reader["NombreCientifico"];
+                    unaPlanta.NombresVulgares = (string)reader["NombresVulgares"];
+                    unaPlanta.Descripcion = (string)reader["Descripcion"];
+                    unaPlanta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
+                    unaPlanta.AlturaMaxima = (int)reader["AlturaMaxima"];
+                    unaPlanta.FotoPlanta = (string)reader["FotoPlanta"];
+                }
+
+
+
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                _conn.Close();
+                _conn.Dispose();
+                command.Dispose();
+            }
+            return unaPlanta;
         }
 
         public void Delete(string nombre)

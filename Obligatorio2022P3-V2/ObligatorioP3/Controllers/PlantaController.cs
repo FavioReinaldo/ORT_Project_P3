@@ -91,7 +91,7 @@ namespace ObligatorioP3.Controllers
             
             string nombreImagen = imagen.FileName;
             string rutaFisicaFoto = Path.Combine
-            (rutaFisicaWwwRoot, "imagenes", "fotosPlanta", nombreImagen);
+            (rutaFisicaWwwRoot, "imagenes", "fotos", nombreImagen);
             
             try
             {
@@ -110,12 +110,12 @@ namespace ObligatorioP3.Controllers
                 return false;
             }
         }
-        public IActionResult VisualisarImagen()
+        public IActionResult VisualisarImagen(string nombre)
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-
-                return View();
+                Planta unaPlanta = repositorio.GetByName(nombre);
+                return View(unaPlanta);
             }
             else
             {

@@ -66,10 +66,8 @@
                 <th>@Html.DisplayFor(modelitem => item.Ambiente)</th>
                 <th>@Html.DisplayFor(modelitem => item.AlturaMaxima)</th>
                 <th><a asp-action="VisualisarImagen" asp-rout-id=@item.NombreCientifico>Ver Imagen</a></th>
-                <th>@Html.DisplayFor(modelitem => item.FichaCuidados)</th>
-                <td><a asp-action="Edit" asp-rout-id=@item.NombreCientifico>Edit</a></td>
-                <td><a asp-action="Details" asp-rout-id=@item.NombreCientifico>Details</a></td>
-                <td><a asp-action="Delete" asp-rout-id=@item.NombreCientifico>Delete</a></td>
+                <th><a asp-action="FichaCuidados" asp-rout-id=@item.NombreCientifico>Ver Ficha de Cuidados</a></th>
+                
             </tr>
         }
     </tbody>
