@@ -843,4 +843,3 @@ D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\DataAcc
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
 D:\10 Programacion\GitHub\Obligatorio1Programacion3\Obligatorio2022P3-V2\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.genruntimeconfig.cache
-C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
