@@ -42,7 +42,7 @@ namespace DataAccess
                     planta.NombresVulgares = (string)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
-                    planta.AlturaMaxima = (double)reader["AlturaMaxima"];
+                    planta.AlturaMaxima = (int)reader["AlturaMaxima"];
                     planta.FotoPlanta = (string)reader["FotoPlanta"];
                     //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
@@ -74,15 +74,16 @@ namespace DataAccess
         public void Insert(Planta obj)
         {
             IDbCommand command = _conn.CreateCommand();
-            command.CommandText = @"INSERT INTO Tipo(NombreTipo, NombreVulgar, NombreCientifico, Descripcion, Ambiente, AlturaMaxima) VALUES(@NombreTipo, @NombreVulgar, @NombreCientifico, @Descripcion, @Ambiente, @AlturaMaxima)";
+            command.CommandText = @"INSERT INTO Planta(NombreTipo, NombresVulgares, NombreCientifico, Descripcion, Ambiente, AlturaMaxima, FotoPlanta) VALUES(@NombreTipo, @NombresVulgares, @NombreCientifico, @Descripcion, @Ambiente, @AlturaMaxima, @FotoPlanta)";
             command.Parameters.Add(new SqlParameter("@NombreTipo", obj.NombreTipo));
-            command.Parameters.Add(new SqlParameter("@NombreVulgar", obj.NombresVulgares));
+            command.Parameters.Add(new SqlParameter("@NombresVulgares", obj.NombresVulgares));
             command.Parameters.Add(new SqlParameter("@NombreCientifico", obj.NombreCientifico));
             command.Parameters.Add(new SqlParameter("@Descripcion", obj.Descripcion));
             command.Parameters.Add(new SqlParameter("@Ambiente", obj.Ambiente));
             command.Parameters.Add(new SqlParameter("@AlturaMaxima", obj.AlturaMaxima));
-            
-            
+            command.Parameters.Add(new SqlParameter("@FotoPlanta", obj.FotoPlanta));
+
+
 
 
             try
@@ -135,7 +136,7 @@ namespace DataAccess
                     planta.NombresVulgares = (string)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
-                    planta.AlturaMaxima = (double)reader["AlturaMaxima"];
+                    planta.AlturaMaxima = (int)reader["AlturaMaxima"];
                     planta.FotoPlanta = (string)reader["FotoPlanta"];
                     //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
@@ -180,7 +181,7 @@ namespace DataAccess
                     planta.NombresVulgares = (string)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
-                    planta.AlturaMaxima = (double)reader["AlturaMaxima"];
+                    planta.AlturaMaxima = (int)reader["AlturaMaxima"];
                     planta.FotoPlanta = (string)reader["FotoPlanta"];
                     //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);
@@ -225,7 +226,7 @@ namespace DataAccess
                     planta.NombresVulgares = (string)reader["NombresVulgares"];
                     planta.Descripcion = (string)reader["Descripcion"];
                     planta.Ambiente = (string)reader["Ambiente"];/*********************************************************************************************/
-                    planta.AlturaMaxima = (double)reader["AlturaMaxima"];
+                    planta.AlturaMaxima = (int)reader["AlturaMaxima"];
                     planta.FotoPlanta = (string)reader["FotoPlanta"];
                     //planta.FichaCuidados = (FichaCuidados)reader["FichaCuidados"];
                     result.Add(planta);

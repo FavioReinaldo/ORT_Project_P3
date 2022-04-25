@@ -59,10 +59,10 @@ namespace ObligatorioP3.Controllers
                 {
                     try
                     {
-                        
-                        repositorio.Insert(unaPlanta);
                         GuardarImagen(imagen, unaPlanta);
-                        return RedirectToAction(nameof(Index));
+                        repositorio.Insert(unaPlanta);
+                        
+                        return RedirectToAction(nameof(ListarPlanta));
                     }
                     catch
                     {

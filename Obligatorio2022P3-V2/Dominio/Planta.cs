@@ -20,10 +20,10 @@ namespace Dominio
 
 
 
-        public Planta(string NombreTipo, string NombreVulgar, string NombreCientifico, string Descripcion, string Ambiente, int AlturaMaxima, string FotoPlanta)
+        public Planta(string NombreTipo, string NombresVulgares, string NombreCientifico, string Descripcion, string Ambiente, int AlturaMaxima, string FotoPlanta)
         {
             this.NombreTipo = NombreTipo;
-            this.NombresVulgares = NombreVulgar;
+            this.NombresVulgares = NombresVulgares;
             this.NombreCientifico = NombreCientifico;
             this.Descripcion = Descripcion;
             this.Ambiente = Ambiente;
