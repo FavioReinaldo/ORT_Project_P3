@@ -18,6 +18,7 @@ namespace ObligatorioP3.Controllers
     {
         RepositorioPlanta repositorio = new RepositorioPlanta(new Connection());
         RepositorioTipo repositorio1 = new RepositorioTipo(new Connection());
+        RepositorioFichasCuidados repositorio2 = new RepositorioFichasCuidados(new Connection());
 
         private IWebHostEnvironment _environment;
         public PlantaController(IWebHostEnvironment environment)
@@ -150,6 +151,19 @@ namespace ObligatorioP3.Controllers
             }
         }
 
+        public IActionResult FichaCuidados(string nombre)
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                FichaCuidados unaFicha = repositorio2.GetByName(nombre);
+                return View(unaFicha);
+                
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
         public IActionResult ListarPlantaMasBajaQueXCentimetrosIndex()
         {
             if (HttpContext.Session.GetString("Mail") != null)
