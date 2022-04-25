@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Dominio
 {
@@ -91,6 +92,18 @@ namespace Dominio
             return resultado;
         }
         #endregion
+
+
+        #region Metodo ValidarAlfabeticoTipo
+        //*************** METODO VALIDAR TIPO ***************
+        public bool ValidarAlfabeticoTipo(Tipo unTipo)
+        {
+            bool alfabetico = Regex.IsMatch(unTipo.Nombre, @"^[a-zA-Z]+$"); //No acepta tilde, pero tampoco numeros
+            return alfabetico;
+        }
+        #endregion
+
+
 
         #region Método para Login: ValidarLogIn
 

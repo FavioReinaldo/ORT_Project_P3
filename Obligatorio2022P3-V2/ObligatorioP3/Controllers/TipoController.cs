@@ -14,7 +14,7 @@ namespace ObligatorioP3.Controllers
     {
         RepositorioTipo repositorio = new RepositorioTipo(new Connection());
         Sistema unS = Sistema.Instancia;
-        
+
         public ActionResult Index()
         {
             if (HttpContext.Session.GetString("Mail") != null)
@@ -24,7 +24,7 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }           
+            }
         }
         public ActionResult Alta()
         {
@@ -36,7 +36,7 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }            
+            }
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -47,19 +47,7 @@ namespace ObligatorioP3.Controllers
 
                 if (unTipo.IsValid() && (unTipo.Nombre != null || unTipo.Nombre != ""))
                 {
-                    List<char> Validos = new List<char>() { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
-                    bool alfabetico = false;
-                    foreach (char a in unTipo.Nombre)
-                    {
-                        if (Validos.Contains(a))
-                        {
-                            alfabetico = true;
-                        }
-                    }
-
-                    if (alfabetico)
-                    {
-
+                    if (unS.ValidarAlfabeticoTipo(unTipo)){
                         try
                         {
                             repositorio.Insert(unTipo);
@@ -70,6 +58,7 @@ namespace ObligatorioP3.Controllers
                             return View("Error", new ErrorViewModel());
                         }
                     }
+
                     return RedirectToAction(nameof(Index), new { mensaje = "No se pudo dar de alta el tipo" });
 
                 }
@@ -82,7 +71,7 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }                      
+            }
         }
         public ActionResult Delete(string nombre)
         {
@@ -94,7 +83,7 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }                        
+            }
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -116,7 +105,7 @@ namespace ObligatorioP3.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+
         }
 
         public ActionResult Edit(string nombre)
@@ -129,10 +118,10 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }            
+            }
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Tipo unTipo)
@@ -160,7 +149,7 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }            
+            }
         }
 
         public ActionResult BuscarTipo(string nomTipo)
@@ -173,7 +162,7 @@ namespace ObligatorioP3.Controllers
             else
             {
                 return RedirectToAction("Login", "Home");
-            }            
+            }
         }
 
 
