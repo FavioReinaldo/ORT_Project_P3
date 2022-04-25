@@ -10,8 +10,8 @@ namespace DataAccess
 {
     interface IRepositorioPlanta:IRepositorio<Planta>
     {
-        new IEnumerable GetMasBajasQueXCentimetros(double miAlturaMaxima);
-        new IEnumerable GetDeXCentimetrosOMas(double miAlturaMaxima);
-        IEnumerable GetPorAmbiente(double miAmbiente);
+        IEnumerable GetMasBajasQueXCentimetros(int miAlturaMaxima);
+        IEnumerable GetDeXCentimetrosOMas(int miAlturaMaxima);
+        new IEnumerable GetPorAmbiente(string miAmbiente);
     }
 }

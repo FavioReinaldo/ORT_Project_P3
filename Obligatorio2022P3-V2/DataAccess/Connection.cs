@@ -11,7 +11,7 @@ namespace DataAccess
 
         SqlConnection con = null;
 
-        private string connectionString = "data source=DESKTOP-MJ8GCR2; database=ObligaotrioProgramacion3; integrated security=true";
+        private string connectionString = "data source=FR; database=ObligaotrioProgramacion3; integrated security=true";
         public string ConnectionString { get => connectionString; set => connectionString = value; }
 
         public int ConnectionTimeout => con.ConnectionTimeout;

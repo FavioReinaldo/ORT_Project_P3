@@ -9,37 +9,6 @@
     <a asp-action="Alta">Crear nueva planta</a>
 </p>
 <!---->
-<h2>Filtrar Lista de Plantas por altura maxima</h2>
-<form method="post" action="~/Planta/ListarPlantaMasBajaQueXCentimetros">
-    <label>Filtrar por altura, mas bajas que:</label><br>
-    <input type="number" name="altura" id="miAlturaMaxima" />
-    <br /><br>
-    <input type="submit" value="Filtrar" onclick="return ValidarDatosAlturaMaxima();" />
-</form>
-<br>
-<p>@ViewBag.Mensaje</p>
-
-<h2>Filtrar Lista de Plantas por altura minima</h2>
-<form method="post" action="~/Planta/BuscarPlantaDeXCentimetrosOMas">
-    <label>Filtrar por altura, mas altas que:</label><br>
-    <input type="number" name="altura" id="miAlturaMinima" />
-    <br /><br>
-    <input type="submit" value="Filtrar" onclick="return ValidarDatosAlturaMinima();" />
-</form>
-<br>
-<p>@ViewBag.Mensaje</p>
-
-<h2>Filtrar Lista de Plantas por Ambiente</h2>
-<form method="post" action="~/Planta/BuscarPlantaPorAmbiente">
-    <label>Filtrar por ambiente:</label><br>
-    <input type="text" name="Ambiente" id="miAmbiente" />
-    <br /><br>
-    <input type="submit" value="Filtrar" onclick="return ValidarDatosAmbiente();" />
-</form>
-<br>
-<p>@ViewBag.Mensaje</p>
-
-
 
 <table class="table">
     <thead>
@@ -72,40 +41,3 @@
         }
     </tbody>
 </table>
-
-<script>
-    function ValidarDatosAlturaMaxima() {
-        let altura = parseFloat(document.getElementById("miAlturaMaxima").value);
-        let validacion = true;
-
-        if (isNaN(altura) || altura <= 0) {
-            alert("Error en la altura ingresada");
-            validacion = false;
-        }
-
-        return validacion;
-    }
-
-    function ValidarDatosAlturaMinima() {
-        let altura = parseFloat(document.getElementById("miAlturaMinima").value);
-        let validacion = true;
-
-        if (isNaN(altura) || altura <= 0) {
-            alert("Error en la altura ingresada");
-            validacion = false;
-        }
-
-        return validacion;
-    }
-
-    function ValidarDatosAmbiente() {
-        let miAmbiente = document.getElementById("miAmbiente").value;
-        let validacion = true;
-
-        if (miAmbiente != null && miAmbiente != "") {
-            alert("Error en la altura ingresada");
-            validacion = false;
-        }
-        return validacion;
-    }
-</script>
