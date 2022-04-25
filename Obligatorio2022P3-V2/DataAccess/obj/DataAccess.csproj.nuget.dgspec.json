@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\FR\\.nuget\\packages\\",
-        "outputPath": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Nicol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj": {
-                "projectPath": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj"
+              "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -98,21 +98,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\FR\\.nuget\\packages\\",
-        "outputPath": "D:\\10 Programacion\\GitHub\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\Nicol\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Facultad 2021\\Tercer Semetre\\Programacion 3\\Obligatorio1Programacion3\\Obligatorio2022P3-V2\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicol\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,7 +170,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
