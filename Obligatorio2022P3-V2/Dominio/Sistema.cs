@@ -98,6 +98,7 @@ namespace Dominio
 
         #region Metodo ValidarAlfabeticoTipo
         //*************** METODO VALIDAR TIPO ***************
+        //Este metodo valida que el dato ingresado sea solo alfabetico
         public bool ValidarAlfabeticoTipo(Tipo unTipo)
         {
             bool alfabetico = Regex.IsMatch(unTipo.Nombre, @"^[a-zA-Z]+$"); //No acepta tilde, pero tampoco numeros
@@ -382,5 +383,11 @@ namespace Dominio
         }
         #endregion
         */
+
+        public bool ValidarDescripcion(Tipo miTipo)
+        {
+            return miTipo.ValidarDescripcion(miTipo.Descripcion);
+        }
+
     }
 }

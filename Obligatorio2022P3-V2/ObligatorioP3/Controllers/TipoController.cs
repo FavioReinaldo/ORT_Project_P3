@@ -47,7 +47,7 @@ namespace ObligatorioP3.Controllers
                 
                 if (unTipo.IsValid())
                 {
-                    if (unS.ValidarAlfabeticoTipo(unTipo))
+                    if (unS.ValidarAlfabeticoTipo(unTipo) && unS.ValidarDescripcion(unTipo))
                     {
                         try
                         {

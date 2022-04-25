@@ -47,12 +47,12 @@ namespace ObligatorioP3.Controllers
             {
                 return RedirectToAction("Login", "Home");
             }
-            
+
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Alta(Planta unaPlanta, IFormFile imagen)
-        {                     
+        {
             if (HttpContext.Session.GetString("Mail") != null)
             {
                 if (unaPlanta.IsValid())
@@ -61,7 +61,7 @@ namespace ObligatorioP3.Controllers
                     {
                         GuardarImagen(imagen, unaPlanta);
                         repositorio.Insert(unaPlanta);
-                        
+
                         return RedirectToAction(nameof(ListarPlanta));
                     }
                     catch
@@ -86,19 +86,19 @@ namespace ObligatorioP3.Controllers
 
             if (imagen == null || unaPlanta == null)
                 return false;
-            
+
             string rutaFisicaWwwRoot = _environment.WebRootPath;
-            
+
             string nombreImagen = imagen.FileName;
             string rutaFisicaFoto = Path.Combine
             (rutaFisicaWwwRoot, "imagenes", "fotos", nombreImagen);
-            
+
             try
             {
-                
+
                 using (FileStream f = new FileStream(rutaFisicaFoto, FileMode.Create))
                 {
-                    
+
                     imagen.CopyTo(f);
                 }
 
@@ -114,8 +114,15 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                Planta unaPlanta = repositorio.GetByName(nombre);
-                return View(unaPlanta);
+                try
+                {
+                    Planta unaPlanta = repositorio.GetByName(nombre);
+                    return View(unaPlanta);
+                }
+                catch
+                {
+                    return View("Error", new Models.ErrorViewModel());
+                }
             }
             else
             {
@@ -123,17 +130,24 @@ namespace ObligatorioP3.Controllers
             }
         }
 
-        
+
         public IActionResult ListarPlanta()
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                return View(repositorio.Get());
+                try
+                {
+                    return View(repositorio.Get());
+                }
+                catch
+                {
+                    return View("Error", new Models.ErrorViewModel());
+                }
             }
             else
             {
                 return RedirectToAction("Login", "Home");
-            }            
+            }
         }
 
         public IActionResult ListarPlantaMasBajaQueXCentimetrosIndex()
@@ -156,7 +170,16 @@ namespace ObligatorioP3.Controllers
 
                 if (miAlturaMaxima > 0)
                 {
-                    return View(repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));
+                    try
+                    {
+                        return View(repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));
+
+                    }
+                    catch
+                    {
+                        return View("Error", new Models.ErrorViewModel());
+
+                    }
 
                 }
                 ViewBag.Mensaje = "Los datos ingresados no son correctos";
@@ -189,7 +212,15 @@ namespace ObligatorioP3.Controllers
 
                 if (miAlturaMinima > 0)
                 {
-                    return View(repositorio.GetDeXCentimetrosOMas(miAlturaMinima));
+                    try
+                    {
+                        return View(repositorio.GetDeXCentimetrosOMas(miAlturaMinima));
+
+                    }
+                    catch
+                    {
+                        return View("Error", new Models.ErrorViewModel());
+                    }
 
                 }
                 ViewBag.Mensaje = "Los datos ingresados no son correctos";
@@ -222,7 +253,15 @@ namespace ObligatorioP3.Controllers
 
                 if (miAmbiente != null && miAmbiente != "")
                 {
-                    return View(repositorio.GetPorAmbiente(miAmbiente));
+                    try
+                    {
+                        return View(repositorio.GetPorAmbiente(miAmbiente));
+
+                    }
+                    catch
+                    {
+                        return View("Error", new Models.ErrorViewModel());
+                    }
 
                 }
                 ViewBag.Mensaje = "Los datos ingresados no son correctos";
@@ -239,8 +278,16 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                ViewBag.Tipos = repositorio1.Get();
-                return View();
+                try
+                {
+                    ViewBag.Tipos = repositorio1.Get();
+                    return View();
+
+                }
+                catch
+                {
+                    return View("Error", new Models.ErrorViewModel());
+                }
             }
             else
             {
@@ -255,7 +302,16 @@ namespace ObligatorioP3.Controllers
 
                 if (NombreTipo != null && NombreTipo != "")
                 {
-                    return View(repositorio.GetPorTipo(NombreTipo));
+                    try
+                    {
+                        return View(repositorio.GetPorTipo(NombreTipo));
+
+                    }
+                    catch
+                    {
+                        return View("Error", new Models.ErrorViewModel());
+
+                    }
 
                 }
                 ViewBag.Mensaje = "Los datos ingresados no son correctos";
@@ -283,7 +339,16 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                return View(repositorio.GetPorTexto(miTexto));
+                try
+                {
+                    return View(repositorio.GetPorTexto(miTexto));
+
+                }
+                catch
+                {
+                    return View("Error", new Models.ErrorViewModel());
+
+                }
             }
             else
             {

@@ -59,5 +59,10 @@ namespace Dominio
             return !string.IsNullOrEmpty(Nombre);
         }
 
+
+        public bool ValidarDescripcion(string descripcion)
+        {
+            return descripcion.Length > 10 && descripcion.Length < 200;
+        }
     }
 }
