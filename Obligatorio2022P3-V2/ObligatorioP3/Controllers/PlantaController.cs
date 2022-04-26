@@ -138,6 +138,7 @@ namespace ObligatorioP3.Controllers
             {
                 try
                 {
+                    ViewBag.Mensaje = "No hay Plantas disponibles";
                     return View(repositorio.Get());
                 }
                 catch
@@ -186,6 +187,7 @@ namespace ObligatorioP3.Controllers
                 {
                     try
                     {
+
                         return View(repositorio.GetMasBajasQueXCentimetros(miAlturaMaxima));
 
                     }
@@ -228,6 +230,7 @@ namespace ObligatorioP3.Controllers
                 {
                     try
                     {
+                        
                         return View(repositorio.GetDeXCentimetrosOMas(miAlturaMinima));
 
                     }

@@ -22,23 +22,23 @@
         </tr>
     </thead>
     <tbody>
-        
-            <tr>
-                <td>
-                    @ViewBag.Tipo.Nombre
-                </td>
-                <td>
-                    @ViewBag.Tipo.Descripcion
-                </td>
 
-                <td>
+        <tr>
+            <td>
+                @ViewBag.Tipo.Nombre
+            </td>
+            <td>
+                @ViewBag.Tipo.Descripcion
+            </td>
 
-                    <a asp-action="Delete" asp-route-nombre="@ViewBag.Tipo.Nombre"> Eliminar </a>
-                    <a asp-action="Edit" asp-route-nombre="@ViewBag.Tipo.Nombre"> Modificar </a>
+            <td>
 
-                </td>
-            </tr>
-        
+                <a asp-action="Delete" asp-route-nombre="@ViewBag.Tipo.Nombre"> Eliminar </a>
+                <a asp-action="Edit" asp-route-nombre="@ViewBag.Tipo.Nombre"> Modificar </a>
+
+            </td>
+        </tr>
+
 
     </tbody>
 </table>

@@ -7,7 +7,7 @@
 
 
 <table class="table">
-    <thead> 
+    <thead>
         <tr>
             <th>@Html.DisplayNameFor(model => model.NombreTipo)</th>
             <th>@Html.DisplayNameFor(model => model.NombreCientifico)</th>
@@ -23,17 +23,17 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@Html.DisplayFor(modelitem => item.NombreTipo)</td>
-            <td>@Html.DisplayFor(modelitem => item.NombreCientifico)</td>
-            <td>@Html.DisplayFor(modelItem => item.NombresVulgares)</td>
-            <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
-            <td>@Html.DisplayFor(modelItem => item.Ambiente)</td>
-            <td>@Html.DisplayFor(modelItem => item.AlturaMaxima)</td>
-            <th><a asp-action="VisualisarImagen" asp-route-nombre="@item.NombreCientifico">Ver Imagen</a></th>
-            <th><a asp-action="FichaCuidados" asp-route-nombre="@item.NombreCientifico">Ver Ficha de Cuidados</a></th>
+            <tr>
+                <td>@Html.DisplayFor(modelitem => item.NombreTipo)</td>
+                <td>@Html.DisplayFor(modelitem => item.NombreCientifico)</td>
+                <td>@Html.DisplayFor(modelItem => item.NombresVulgares)</td>
+                <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                <td>@Html.DisplayFor(modelItem => item.Ambiente)</td>
+                <td>@Html.DisplayFor(modelItem => item.AlturaMaxima)</td>
+                <th><a asp-action="VisualisarImagen" asp-route-nombre="@item.NombreCientifico">Ver Imagen</a></th>
+                <th><a asp-action="FichaCuidados" asp-route-nombre="@item.NombreCientifico">Ver Ficha de Cuidados</a></th>
 
-        </tr>
+            </tr>
         }
     </tbody>
 </table>

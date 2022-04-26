@@ -19,6 +19,7 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
+                ViewBag.Mensaje = "No hay Tipos de Planta disponibles";
                 return View(repositorio.Get());
             }
             else
@@ -162,6 +163,7 @@ namespace ObligatorioP3.Controllers
             if (HttpContext.Session.GetString("Mail") != null)
             {
                 ViewBag.Tipo = repositorio.GetByName(nomTipo);
+                ViewBag.Mensaje = "No hay un tipos de nombre" + nomTipo;
                 return View();
             }
             else
