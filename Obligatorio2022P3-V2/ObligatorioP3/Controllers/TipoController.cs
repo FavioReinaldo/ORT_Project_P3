@@ -44,7 +44,7 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                
+
                 if (unTipo.IsValid())
                 {
                     if (unS.ValidarAlfabeticoTipo(unTipo) && unS.ValidarDescripcion(unTipo))
@@ -59,12 +59,12 @@ namespace ObligatorioP3.Controllers
                             var ex = e.Message;
                             if (ex.Contains("duplicate key"))
                             {
-                                return RedirectToAction(nameof(Index), new { mensaje = "Error__El_campo_debe_ser_unico"});
+                                return RedirectToAction("ErrorAltaTipo", "Tipo");
                             }
                         }
                     }
 
-                    return RedirectToAction(nameof(Index), new { mensaje = "No se pudo dar de alta el tipo" });
+                    return RedirectToAction("ErrorAltaTipo", "Tipo");
 
                 }
                 else
@@ -163,6 +163,19 @@ namespace ObligatorioP3.Controllers
             {
                 ViewBag.Tipo = repositorio.GetByName(nomTipo);
                 return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Home");
+            }
+        }
+
+        public ActionResult ErrorAltaTipo()
+        {
+            if (HttpContext.Session.GetString("Mail") != null)
+            {
+                return View();
+
             }
             else
             {
