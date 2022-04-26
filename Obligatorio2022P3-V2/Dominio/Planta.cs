@@ -72,7 +72,8 @@ namespace Dominio
 
         public bool IsValid()
         {
-            return !string.IsNullOrEmpty(NombreCientifico);
+            return !(string.IsNullOrEmpty(this.NombreTipo) || string.IsNullOrEmpty(this.NombresVulgares) || string.IsNullOrEmpty(this.NombreCientifico) || string.IsNullOrEmpty(this.Descripcion) || string.IsNullOrEmpty(this.Ambiente) || string.IsNullOrEmpty(this.FotoPlanta)) || this.AlturaMaxima > 0;
+            
         }
 
     }

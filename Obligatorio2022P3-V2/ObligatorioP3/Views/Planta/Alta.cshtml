@@ -1,18 +1,30 @@
 ﻿@model Dominio.Planta;
 
 
-    @{
-        ViewData["Title"] = "Alta";
+@{
+    ViewData["Title"] = "Alta";
 
-    }
 
-    <h1>Alta Planta</h1>
+
+}
+
+<h1>Alta Planta</h1>
+
+@if (Model == null)
+{
+    @ViewBag.Mensaje
+    <div>
+        <a asp-action="Alta"> Volver al alta de plantas </a>
+    </div>
+}
+else
+{
 
     <div class="row">
         <div class="col-md-4">
             <form asp-action="Alta" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                
+
                 <div class="form-group">
                     <label asp-for="NombreTipo" class="control-label"></label>
                     <select asp-for="NombreTipo">
@@ -67,5 +79,8 @@
     </div>
 
     <div>
-        <a asp-action="Index"> Lista de Plantas </a>
+        <a asp-action="ListarPlanta"> Listar plantas </a>
     </div>
+}
+
+

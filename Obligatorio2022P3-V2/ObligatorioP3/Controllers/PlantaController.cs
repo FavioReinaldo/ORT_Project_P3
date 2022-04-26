@@ -72,7 +72,8 @@ namespace ObligatorioP3.Controllers
                 }
                 else
                 {
-                    return View(new Models.ErrorViewModel());
+                    ViewBag.Mensaje = "Error en los campos ingresados";
+                    return View();
                 }
             }
             else
@@ -156,9 +157,17 @@ namespace ObligatorioP3.Controllers
         {
             if (HttpContext.Session.GetString("Mail") != null)
             {
-                FichaCuidados unaFicha = repositorio2.GetByName(nombre);
-                return View(unaFicha);
-                
+                try
+                {
+                    FichaCuidados unaFicha = repositorio2.GetByName(nombre);
+                    return View(unaFicha);
+                }
+                catch
+                {
+                    ViewBag.Mensaje = "Esta planta no tiene Ficha de cuidados.";
+                    return View();
+                }
+
             }
             else
             {
@@ -193,7 +202,8 @@ namespace ObligatorioP3.Controllers
                     }
                     catch
                     {
-                        return View("Error", new Models.ErrorViewModel());
+                        ViewBag.Mensaje = "No hay plantas para mostrar que cumplan con el filtro";
+                        return View();
 
                     }
 
@@ -236,7 +246,8 @@ namespace ObligatorioP3.Controllers
                     }
                     catch
                     {
-                        return View("Error", new Models.ErrorViewModel());
+                        ViewBag.Mensaje = "No hay plantas para mostrar que cumplan con el filtro";
+                        return View();
                     }
 
                 }
@@ -277,7 +288,8 @@ namespace ObligatorioP3.Controllers
                     }
                     catch
                     {
-                        return View("Error", new Models.ErrorViewModel());
+                        ViewBag.Mensaje = "No hay plantas para mostrar que cumplan con el filtro";
+                        return View();
                     }
 
                 }
@@ -326,7 +338,8 @@ namespace ObligatorioP3.Controllers
                     }
                     catch
                     {
-                        return View("Error", new Models.ErrorViewModel());
+                        ViewBag.Mensaje = "No hay plantas para mostrar que cumplan con el filtro";
+                        return View();
 
                     }
 
@@ -363,7 +376,8 @@ namespace ObligatorioP3.Controllers
                 }
                 catch
                 {
-                    return View("Error", new Models.ErrorViewModel());
+                    ViewBag.Mensaje = "No hay plantas para mostrar que cumplan con el filtro";
+                    return View();
 
                 }
             }
