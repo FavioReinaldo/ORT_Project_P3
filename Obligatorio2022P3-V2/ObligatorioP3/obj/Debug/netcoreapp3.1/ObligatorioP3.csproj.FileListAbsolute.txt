@@ -1327,3 +1327,4 @@ C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Ob
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\Razor\Views\Planta\ListarPlantaPorTextoIndex.cshtml.g.cs
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\Razor\Views\Planta\ListarPlantaPorTipo.cshtml.g.cs
 C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\Razor\Views\Planta\ListarPlantaPorTipoIndex.cshtml.g.cs
+C:\Users\Nicol\OneDrive\Documents\Facultad 2021\Tercer Semetre\Programacion 3\Obligatorio1Programacion3\Obligatorio2022P3-V2\ObligatorioP3\obj\Debug\netcoreapp3.1\Razor\Views\Tipo\ErrorAltaTipo.cshtml.g.cs
