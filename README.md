@@ -1,4 +1,4 @@
-# Obligatorio1Programacion3
+# ORT_Project_P2 (Obligatorio 1 Programacion 3)
 
 En este proyecto se implementara parte de la gestión de un vivero. 
 Por el momento solamente se implementarán las funcionalidades relativas al mantenimiento de las plantas y sus compras. 
